@@ -1,0 +1,404 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Messages
+            document.querySelectorAll('#add-message').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'پیام با موفقیت ثبت شد!', 'success');
+            }));
+            document.querySelectorAll('#remove-message').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'آیا مطمئن هستید؟',
+                    text: 'این پیام حذف خواهد شد!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'بله، حذف کن',
+                    cancelButtonText: 'خیر'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('حذف شد!', 'پیام با موفقیت حذف شد.', 'success');
+                    }
+                });
+            }));
+            document.querySelectorAll('#edit-message').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'پیام برای ویرایش آماده است!', 'info');
+            }));
+
+            // Buttons
+            document.querySelectorAll('#add-button').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'دکمه با موفقیت ثبت شد!', 'success');
+            }));
+            document.querySelectorAll('#remove-button').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'آیا مطمئن هستید؟',
+                    text: 'این دکمه حذف خواهد شد!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'بله، حذف کن',
+                    cancelButtonText: 'خیر'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('حذف شد!', 'دکمه با موفقیت حذف شد.', 'success');
+                    }
+                });
+            }));
+            document.querySelectorAll('#edit-button').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'دکمه برای ویرایش آماده است!', 'info');
+            }));
+
+            // Commands
+            document.querySelectorAll('#add-command').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'دستور با موفقیت ثبت شد!', 'success');
+            }));
+            document.querySelectorAll('#remove-command').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'آیا مطمئن هستید؟',
+                    text: 'این دستور حذف خواهد شد!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'بله، حذف کن',
+                    cancelButtonText: 'خیر'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('حذف شد!', 'دستور با موفقیت حذف شد.', 'success');
+                    }
+                });
+            }));
+            document.querySelectorAll('#edit-command').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'دستور برای ویرایش آماده است!', 'info');
+            }));
+
+            // Files
+            document.querySelectorAll('#add-file').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'فایل با موفقیت آپلود شد!', 'success');
+            }));
+            document.querySelectorAll('#remove-file').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'آیا مطمئن هستید؟',
+                    text: 'این فایل حذف خواهد شد!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'بله، حذف کن',
+                    cancelButtonText: 'خیر'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('حذف شد!', 'فایل با موفقیت حذف شد.', 'success');
+                    }
+                });
+            }));
+            document.querySelectorAll('#edit-file').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'فایل برای ویرایش آماده است!', 'info');
+            }));
+
+            // Ads
+            document.querySelectorAll('#add-ad').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'تبلیغ با موفقیت ثبت شد!', 'success');
+            }));
+            document.querySelectorAll('#remove-ad').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'آیا مطمئن هستید؟',
+                    text: 'این تبلیغ حذف خواهد شد!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'بله، حذف کن',
+                    cancelButtonText: 'خیر'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('حذف شد!', 'تبلیغ با موفقیت حذف شد.', 'success');
+                    }
+                });
+            }));
+            document.querySelectorAll('#edit-ad').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'تبلیغ برای ویرایش آماده است!', 'info');
+            }));
+
+            // Group Management
+            document.querySelectorAll('#add-group').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'تنظیمات گروه با موفقیت ثبت شد!', 'success');
+            }));
+            document.querySelectorAll('#remove-group').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'آیا مطمئن هستید؟',
+                    text: 'این تنظیمات گروه حذف خواهد شد!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'بله، حذف کن',
+                    cancelButtonText: 'خیر'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('حذف شد!', 'تنظیمات گروه با موفقیت حذف شد.', 'success');
+                    }
+                });
+            }));
+            document.querySelectorAll('#edit-group').forEach(btn => btn.addEventListener('click', () => {
+                Swal.fire('موفقیت', 'تنظیمات گروه برای ویرایش آماده است!', 'info');
+            }));
+        });
+    </script>
+
+    <main class="container relative">
+        <!-- Breadcrumb -->
+        <nav class="flex mt-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                    <a href="index.html"
+                        class="inline-flex items-center text-sm gap-x-1 text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                        title="بازگشت به صفحه اصلی" rel="home">
+                        <svg class="w-4 h-4 mb-0.5" aria-hidden="true">
+                            <use href="#home" />
+                        </svg>
+                        صفحه اصلی
+                    </a>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="ms-1 text-sm text-gray-500 md:ms-2 dark:text-gray-400">تماس با ما</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+        <section class="relative flex items-center justify-center w-full">
+            <!-- Background -->
+            <div class="pointer-events-none absolute inset-0 flex w-full items-start justify-center overflow-hidden 
+        [mask-image:radial-gradient(circle_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_85%)]">
+                <svg
+                    class="absolute left-0 top-0 h-full w-full stroke-black/10 stroke-[2] 
+            [mask-image:radial-gradient(circle_at_center,rgba(255,255,255,1)_20%,rgba(255,255,255,0)_95%)] dark:stroke-white/10">
+                    <rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern)"></rect>
+                    <defs>
+                        <pattern id="grid-pattern" viewBox="0 0 64 64" width="60" height="60"
+                            patternUnits="userSpaceOnUse">
+                            <path d="M64 0H0V64" fill="none"></path>
+                        </pattern>
+                    </defs>
+                </svg>
+            </div>
+
+            <div
+                class="relative maxwidth-abouts w-[45rem] mx-5 my-10 flex flex-col justify-center pt-12 pb-5 px-4 md:px-8 bg-white dark:bg-gray-800 shadow-md rounded-xl">
+                <div class="sm:mx-auto sm:w-full">
+                    <p class="text-gray-800 dark:text-gray-100 font-DanaDemiBold text-lg">تماس با پشتیبانی</p>
+                    <p class="text-gray-700 dark:text-gray-200 font-Dana mt-2 mb-8">
+                        برای سؤالات، مشکلات یا درخواست‌های مربوط به ربات‌های تلگرام، خدمات وب‌سایت کراپلود بات، یا
+                        هرگونه پشتیبانی، ابتدا بخش <a href="{ url 'faq_questions' }" class="text-blue-500 hover:underline"
+                            title="مشاهده سوالات متداول" rel="noopener">سوالات متداول</a> را بررسی کنید. اگر پاسخ خود را
+                        نیافتید، از فرم زیر برای ارسال تیکت به تیم پشتیبانی استفاده کنید. ما متعهد به ارائه پاسخ سریع و
+                        دقیق هستیم.
+                    </p>
+
+                    <!-- Ticket Submission Procedure -->
+                    <div class="mb-8">
+                        <h2 class="font-DanaMedium text-xl text-gray-800 dark:text-gray-100">نحوه ارسال تیکت پشتیبانی
+                        </h2>
+                        <p class="mt-3 leading-8 text-gray-600 dark:text-gray-300">
+                            برای اطمینان از رسیدگی سریع و مؤثر به درخواست شما، لطفاً مراحل زیر را برای ارسال تیکت
+                            پشتیبانی دنبال کنید:
+                        </p>
+                        <ul
+                            class="mt-3 text-gray-600 dark:text-gray-300 space-y-2 child:flex child:items-start child:gap-x-2">
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>ابتدا بخش <a href="{ url 'faq_questions' }" class="text-blue-500 hover:underline"
+                                        title="مشاهده سوالات متداول" rel="noopener">سوالات متداول</a> را بررسی کنید تا
+                                    ببینید آیا پاسخ سؤال شما قبلاً ارائه شده است.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>فرم زیر را با اطلاعات دقیق و کامل پر کنید. اطلاعات نادرست یا ناقص ممکن است باعث تأخیر
+                                    در پاسخگویی شود.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>موضوع تیکت را به‌صورت واضح و مختصر (مثلاً: "مشکل در تنظیم ربات" یا "سؤال درباره
+                                    پلن‌ها") وارد کنید.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>در بخش پیام، جزئیات مشکل یا سؤال خود را با دقت شرح دهید. در صورت امکان، نام ربات،
+                                    توکن (بدون اشتراک‌گذاری کامل)، یا خطاهای دریافت‌شده را ذکر کنید.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>پس از ارسال تیکت، یک ایمیل تأیید با شماره تیکت دریافت خواهید کرد. این شماره را برای
+                                    پیگیری‌های بعدی نگه دارید.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>پاسخ تیکت معمولاً ظرف 24 تا 48 ساعت کاری از طریق ایمیل یا <a href="dashboard.html"
+                                        class="text-blue-500 hover:underline" title="ورود به پنل کاربری"
+                                        rel="noopener">پنل کاربری</a> ارسال می‌شود.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>در صورت نیاز به پشتیبانی فوری، با شماره <a href="tel:+989210373679"
+                                        class="text-blue-500 hover:underline" title="تماس با پشتیبانی">09210373679</a>
+                                    تماس بگیرید (فقط در ساعات کاری).</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Policies -->
+                    <div class="mb-8">
+                        <h2 class="font-DanaMedium text-xl text-gray-800 dark:text-gray-100">قوانین پشتیبانی</h2>
+                        <p class="mt-3 leading-8 text-gray-600 dark:text-gray-300">
+                            تیم پشتیبانی کراپلود بات متعهد به ارائه خدمات باکیفیت است. برای اطمینان از تجربه‌ای مؤثر و
+                            منصفانه، لطفاً قوانین پشتیبانی زیر را رعایت کنید:
+                        </p>
+                        <ul
+                            class="mt-3 text-gray-600 dark:text-gray-300 space-y-2 child:flex child:items-start child:gap-x-2">
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>پشتیبانی از طریق ایمیل (<a href="mailto:croplod@mail.com"
+                                        class="text-blue-500 hover:underline"
+                                        title="ارسال ایمیل به پشتیبانی">croplod@mail.com</a>)، تماس تلفنی، یا فرم تیکت
+                                    ارائه می‌شود.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>اولویت پاسخگویی با کاربران پلن‌های پیشرفته‌تر است، اما تمامی تیکت‌ها در اسرع وقت
+                                    بررسی می‌شوند.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>تیکت‌های مربوط به مشکلات فنی (مانند خطای API یا قطعی ربات) باید شامل جزئیات دقیق،
+                                    مانند کد خطا یا زمان وقوع مشکل، باشند.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>کراپلود مسئولیتی در قبال مشکلات ناشی از نقض قوانین تلگرام (مانند غیرفعال شدن ربات به
+                                    دلیل اسپم) یا قطعی سرورهای تلگرام ندارد.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>درخواست‌های مربوط به حریم خصوصی (مانند حذف داده‌ها) باید از طریق ایمیل یا فرم تیکت با
+                                    ارائه اطلاعات هویتی تأییدشده ارسال شوند.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>کاربران نباید تیکت‌های تکراری برای یک مشکل ارسال کنند. این کار ممکن است باعث تأخیر در
+                                    پاسخگویی شود.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>پشتیبانی تلفنی فقط در ساعات کاری (شنبه تا پنج‌شنبه، 9 صبح تا 5 عصر به وقت ایران)
+                                    ارائه می‌شود.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>در صورت استفاده از زبان نامناسب یا رفتار غیرمحترمانه در تیکت‌ها، کراپلود حق دارد از
+                                    ارائه پشتیبانی خودداری کند.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>پشتیبانی برای مسائل مرتبط با توسعه ربات‌های سفارشی فقط در پلن‌های پیشرفته ارائه
+                                    می‌شود. برای اطلاعات بیشتر، به <a href="dashboard.html"
+                                        class="text-blue-500 hover:underline" title="مشاهده پلن‌ها در پنل کاربری"
+                                        rel="noopener">پنل کاربری</a> مراجعه کنید.</p>
+                            </li>
+                            <li>
+                                <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
+                                <p>کاربران باید از به‌روزرسانی‌های تلگرام و کراپلود بات مطلع باشند و ربات‌های خود را با
+                                    نسخه‌های جدید API هماهنگ کنند.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Form -->
+                    <form class="space-y-5" action="/submit-ticket" method="POST">
+                        <div class="grid grid-cols-12 gap-6">
+                            <input type="text" name="full_name" required placeholder="نام و نام خانوادگی"
+                                class="block w-full p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-6 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
+                                aria-label="نام و نام خانوادگی">
+                            <input type="email" name="email" required placeholder="ایمیل"
+                                class="block w-full p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-6 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
+                                aria-label="ایمیل">
+                            <input type="text" name="subject" required placeholder="موضوع (مثلاً: پشتیبانی ربات تلگرام)"
+                                class="block w-full p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-12 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
+                                aria-label="موضوع تیکت">
+                            <input type="text" name="subject" required placeholder="کد خطا ( CCODE84510 )"
+                                class="block w-full p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-12 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
+                                aria-label="کد خطا">
+                            <select name="request_type" required
+                                class="block w-full p-3 outline-none placeholder:text-gray-400 transition-all col-span-12 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-lg focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
+                                aria-label="نوع درخواست">
+                                <option value="" disabled selected class="text-gray-400 dark:text-gray-500">نوع درخواست
+                                    را انتخاب کنید</option>
+                                <option value="support" class="text-gray-800 dark:text-gray-100">پشتیبانی ربات تلگرام
+                                </option>
+                                <option value="development" class="text-gray-800 dark:text-gray-100">توسعه ربات جدید
+                                </option>
+                                <option value="consulting" class="text-gray-800 dark:text-gray-100">مشاوره فنی</option>
+                                <option value="billing" class="text-gray-800 dark:text-gray-100">سؤالات مربوط به پرداخت
+                                    و پلن‌ها</option>
+                                <option value="privacy" class="text-gray-800 dark:text-gray-100">درخواست‌های حریم خصوصی
+                                </option>
+                                <option value="security" class="text-gray-800 dark:text-gray-100">مشکلات امنیتی</option>
+                                <option value="other" class="text-gray-800 dark:text-gray-100">سایر</option>
+                            </select>
+                            <textarea name="message" required
+                                placeholder="پیام شما (توضیحات کامل مشکل یا سؤال خود را وارد کنید)"
+                                class="w-full h-200 p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-12 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
+                                aria-label="پیام"></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit"
+                                class="submit-btn bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-all focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50"
+                                id="add-message-ticket-list" aria-label="ارسال تیکت پشتیبانی">ارسال تیکت</button>
+                        </div>
+                    </form>
+                    <!-- Contact Information -->
+                    <div
+                        class="mt-10 flex items-center justify-center gap-x-8 flex-wrap text-gray-500 dark:text-gray-400 child:flex child:items-center child:justify-center child:gap-x-1">
+                        <div>
+                            <svg class="size-5" aria-hidden="true">
+                                <use href="#map" />
+                            </svg>
+                            <p>زاهدان، استان سیستان و بلوچستان، کراپلود</p>
+                        </div>
+                        <div>
+                            <svg class="size-5 mb-1" aria-hidden="true">
+                                <use href="#envelope" />
+                            </svg>
+                            <a href="mailto:croplod@mail.com"
+                                class="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all"
+                                title="ارسال ایمیل به پشتیبانی">croplod@mail.com</a>
+                        </div>
+                        <div>
+                            <svg class="size-5" aria-hidden="true">
+                                <use href="#phone" />
+                            </svg>
+                            <a href="tel:+989210373679"
+                                class="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all"
+                                title="تماس با پشتیبانی">09210373679</a>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="mt-8 text-gray-700 dark:text-gray-200 font-Dana">
+                        <p class="text-sm">ساعات پاسخگویی: شنبه تا پنج‌شنبه، ۹ صبح تا ۵ عصر (به وقت ایران)</p>
+                        <p class="text-sm mt-2">برای اطلاعات بیشتر درباره ربات‌های تلگرام، به <a
+                                href="https://core.telegram.org/bots" class="text-blue-500 hover:underline"
+                                target="_blank" rel="noopener noreferrer" title="مستندات ربات‌های تلگرام">مستندات رسمی
+                                تلگرام</a> مراجعه کنید.</p>
+                        <p class="text-sm mt-2">مستندات مربوط به <a href="terms.html"
+                                class="text-blue-500 hover:underline" title="مشاهده شرایط و قوانین"
+                                rel="noopener">قوانین و حریم خصوصی کراپلود</a> را مطالعه کنید.</p>
+                        <p class="text-sm mt-2">برای پیگیری تیکت‌های قبلی، به <a href="dashboard.html"
+                                class="text-blue-500 hover:underline" title="ورود به پنل کاربری" rel="noopener">پنل
+                                کاربری</a> مراجعه کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

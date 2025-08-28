@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کراپلود | در حال بار گذاری</title>
+    <link rel="stylesheet" href="{% static './styles/app.css' %}">
+    <link rel="stylesheet" href="{% static './swiper/swiper.css' %}">
+    <!-- ==========================  DARK MODE SCRIPT ============================= -->
+    <script type="text/javascript">
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="relative flex items-center justify-center min-h-screen w-full">
+        <!-- background -->
+        <div class="pointer-events-none absolute inset-0 flex w-screen items-center justify-center overflow-hidden 
+  [mask-image:radial-gradient(circle_at_center,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_85%)]">
+
+            <svg
+                class="absolute left-0 top-0 h-full w-full stroke-black/10 stroke-[2] 
+    [mask-image:radial-gradient(circle_at_center,rgba(255,255,255,1)_20%,rgba(255,255,255,0)_95%)] dark:stroke-white/10">
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern)"></rect>
+                <defs>
+                    <pattern id="grid-pattern" viewBox="0 0 64 64" width="60" height="60" patternUnits="userSpaceOnUse">
+                        <path d="M64 0H0V64" fill="none"></path>
+                    </pattern>
+                </defs>
+            </svg>
+        </div>
+
+        <div
+            class="flex items-center justify-center gap-5 flex-wrap child:bg-blue-600 text-white child:py-2 child:px-10 child:z-10 child:rounded-xl ">
+            <button id="loding-btn">لودینگ </button>
+        </div>
+
+        <!-- loding-alert -->
+        <div
+            class="loding-modal absolute w-64 h-36 bg-white dark:bg-gray-800 shadow-md rounded-xl flex flex-col gap-y-5 items-center justify-center z-20">
+            <div class="flex flex-col text-center">
+                <span class="font-MorabbaMedium text-4xl flex items-center">
+                    کراپلود...
+                </span>
+            </div>
+            <div class="flex flex-row gap-2">
+                <div class="w-3 h-3 rounded-full bg-zinc-400 animate-bounce"></div>
+                <div class="w-3 h-3 rounded-full bg-zinc-400 animate-bounce [animation-delay:-.3s]"></div>
+                <div class="w-3 h-3 rounded-full bg-zinc-400 animate-bounce [animation-delay:-.5s]"></div>
+            </div> 
+        </div>
+    </section>
+
+
+
+    <div class="overlay"></div>
+
+    <script src="{% static './scripts/app.js' %}"></script>
+</body>
+
+
+</html>

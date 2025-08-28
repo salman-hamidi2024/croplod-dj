@@ -1,0 +1,427 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <main class="font-DanaMedium">
+        <!-- Breadcrumb -->
+        <nav class="flex mt-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                    <a href="index.html" class=" font-DanaMedium inline-flex items-center text-sm gap-x-1 text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                        <svg class="size-4 mb-0.5">
+                            <use href="#home" />
+                        </svg>
+                        صفحه اصلی
+                    </a>
+                </li>
+                <li class="inline-flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                    </svg>
+                    <a href="Extensions.html" class="font-DanaMedium inline-flex items-center text-sm gap-x-1 text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                        افزونه‌ها
+                    </a>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="ms-1 text-sm text-gray-500 md:ms-2 dark:text-gray-400">مدیریت گروه</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- PLUGIN DETAILS SECTION -->
+        <section class="mt-5 flex flex-col lg:flex-row items-start gap-4 child:rounded-lg child:bg-white child:dark:bg-gray-800 child:shadow child:p-4">
+            <!-- IMAGE & INFO BOX Container -->
+            <div class="w-full center-box-extention-details lg:w-3/4">
+                <div class="flex flex-col md:flex-row justify-start gap-x-8 xl:gap-x-2 items-start">
+                    <!-- IMAGE SLIDER -->
+                    <div class="w-2/4 hidden md:flex flex-col justify-center items-center gap-y-4">
+                        <span class="open-sliderModal">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" class="cursor-pointer object-cover" alt="افزونه مدیریت گروه">
+                        </span>
+                        <div class="swiper gallery-swiper w-full">
+                            <div class="swiper-wrapper w-full child:w-full child:overflow-hidden child:rounded-lg">
+                                <div class="swiper-slide">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" class="w-full h-24 object-cover" alt="تصویر افزونه">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" class="w-full h-24 object-cover" alt="تصویر افزونه">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" class="w-full h-24 object-cover" alt="تصویر افزونه">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination gallery-swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!-- INFOS -->
+                    <div class="w-full md:w-3/4 flex flex-col gap-y-7">
+                        <div class="flex items-center justify-between">
+                            <a href="Extensions.html" class="font-DanaMedium text-sky-400">بازگشت به افزونه‌ها</a>
+                        </div>
+
+                        <!-- MOBILE SLIDER -->
+                        <div class="flex md:hidden">
+                            <div class="swiper MobileProductSlider w-full">
+                                <div class="swiper-wrapper w-full child:w-full child:overflow-hidden child:rounded-lg">
+                                    <div class="swiper-slide">
+                                        <span>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" class="mobile-plan-image-details" alt="افزونه مدیریت گروه">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination MobileProductSlider-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-y-3">
+                            <p class="text-lg font-DanaDemiBold dark:text-gray-300">
+                                افزونه مدیریت گروه کراپلود
+                            </p>
+                            <p class="text-sm text-gray-300 dark:text-gray-500">
+                                ابزار هوشمند برای مدیریت گروه‌های تلگرامی
+                            </p>
+                            <div class="flex items-center gap-x-2">
+                                <span class="flex items-center gap-x-1 text-sm">
+                                    <svg class="size-4 text-yellow-400 mb-1.5">
+                                        <use href="#star"></use>
+                                    </svg>
+                                    5.0 <span class="text-gray-300 dark:text-gray-500">(امتیاز 120 کاربر)</span>
+                                </span>
+                                <span class="h-6 bg-slate-100 text-gray-400 dark:bg-slate-700 dark:text-gray-400 flex items-center justify-center rounded-full px-2 text-xs font-DanaMedium pt-1">
+                                    28 دیدگاه
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- PLANS -->
+                        <div class="flex flex-col gap-y-4">
+                            <h1 class="font-DanaDemiBold text-lg color-title dark:text-gray-200">پلن‌های موردنیاز:</h1>
+                            <div class="flex items-center gap-x-3 child:rounded-full child:size-9 child:p-1 chap-gap-10">
+                                <button class="time-box-plans">نقره‌ای</button>
+                                <button class="time-box-plans">طلایی</button>
+                                <button class="time-box-plans">الماسی</button>
+                                <button class="time-box-plans">پریمیوم</button>
+                            </div>
+                        </div>
+
+                        <!-- Features Box -->
+                        <div class="w-full flex flex-col gap-y-4">
+                            <h1 class="font-DanaDemiBold text-lg dark:text-gray-200">ویژگی‌های کلیدی</h1>
+                            <div class="grid grid-cols-12 gap-2 child:p-2 child:h-16 child:bg-gray-100 dark:child:bg-gray-900 child:rounded-lg child:flex child:flex-col child:gap-y-1.5">
+                                <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <p class="text-sm text-gray-500">مدیریت اعضا</p>
+                                    <p class="line-clamp-1 font-DanaDemiBold text-sm text-slate-800 dark:text-slate-200">
+                                        حذف خودکار کاربران غیرفعال
+                                    </p>
+                                </div>
+                                <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <p class="text-sm text-gray-500">فیلتر محتوا</p>
+                                    <p class="line-clamp-1 font-DanaDemiBold text-sm text-slate-800 dark:text-slate-200">
+                                        فیلتر پیام‌های اسپم و نامناسب
+                                    </p>
+                                </div>
+                                <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <p class="text-sm text-gray-500">پشتیبانی</p>
+                                    <p class="line-clamp-1 font-DanaDemiBold text-sm text-slate-800 dark:text-slate-200">
+                                        پشتیبانی مستقیم کراپلود
+                                    </p>
+                                </div>
+                                <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <p class="text-sm text-gray-500">گزارش‌گیری</p>
+                                    <p class="line-clamp-1 font-DanaDemiBold text-sm text-slate-800 dark:text-slate-200">
+                                        گزارش‌های دقیق از فعالیت گروه
+                                    </p>
+                                </div>
+                                <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <p class="text-sm text-gray-500">مدیریت چندگانه</p>
+                                    <p class="line-clamp-1 font-DanaDemiBold text-sm text-slate-800 dark:text-slate-200">
+                                        مدیریت همزمان چند گروه
+                                    </p>
+                                </div>
+                                <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <p class="text-sm text-gray-500">دستورات سفارشی</p>
+                                    <p class="line-clamp-1 font-DanaDemiBold text-sm text-slate-800 dark:text-slate-200">
+                                        دستورات اختصاصی برای ادمین‌ها
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABS SECTION -->
+        <section class="relative max-width-2 mt-10 flex flex-col items-start gap-4 rounded-lg bg-white dark:bg-gray-800">
+            <div class="py-3 flex items-center gap-x-6 child:font-DanaMedium tab-buttons z-10 border-b border-gray-600/20 dark:border-b-gray-200/20">
+                <button class="tab-btn text-blue-500" data-target="tab1">معرفی افزونه</button>
+                <button class="tab-btn text-gray-500 dark:text-gray-300" data-target="tab2">مشخصات</button>
+                <button class="tab-btn text-gray-500 dark:text-gray-300" data-target="tab3">دیدگاه‌ها</button>
+            </div>
+
+            <!-- Tab 1: Plugin Description -->
+            <div class="tab-content tab1 block">
+                <h2 class="font-DanaDemiBold border-b-2 border-blue-500 w-fit p-1 text-lg">معرفی افزونه مدیریت گروه</h2>
+                <p class="mt-4 leading-8">
+                    افزونه مدیریت گروه کراپلود یک ابزار هوشمند و قدرتمند برای مدیریت گروه‌های تلگرامی است که برای مدیران گروه‌ها و کسب‌وکارها طراحی شده است. این افزونه به شما امکان می‌دهد با استفاده از قابلیت‌های پیشرفته، گروه‌های خود را به‌صورت خودکار و کارآمد مدیریت کنید. از حذف کاربران غیرفعال تا فیلتر محتوای نامناسب و گزارش‌گیری دقیق، این افزونه تجربه‌ای بی‌نظیر از مدیریت گروه ارائه می‌دهد.
+                    <br><br>
+                    ویژگی‌های کلیدی این افزونه شامل مدیریت خودکار اعضا، فیلتر پیام‌های اسپم با هوش مصنوعی، و امکان ایجاد دستورات سفارشی برای ادمین‌ها است. همچنین، می‌توانید چندین گروه را به‌صورت همزمان مدیریت کنید و از داشبورد گزارش‌گیری برای تحلیل فعالیت‌های گروه بهره‌مند شوید.
+                    <br><br>
+                    این افزونه برای پلن‌های نقره‌ای، طلایی، الماسی و پریمیوم در دسترس است و با پشتیبانی مستقیم تیم کراپلود، تجربه‌ای بدون دغدغه را برای کاربران فراهم می‌کند.
+                </p>
+            </div>
+
+            <!-- Tab 2: Specifications -->
+            <div class="tab-content tab2 hidden w-full lg:w-[50%]">
+                <h2 class="font-DanaDemiBold border-b-2 border-blue-500 w-fit p-1 text-lg">مشخصات کلی</h2>
+                <div class="p-4 my-5 w-full mx-auto flex justify-center items-center gap-x-20">
+                    <ul class="space-y-3 text-gray-500 dark:text-gray-300 child:pt-2">
+                        <li>نوع افزونه</li>
+                        <li>پشتیبانی پلن‌ها</li>
+                        <li>ویژگی‌های اصلی</li>
+                        <li>مدیریت محتوا</li>
+                        <li>گزارش‌گیری</li>
+                        <li>پشتیبانی</li>
+                    </ul>
+                    <ul class="space-y-3 text-gray-800 dark:text-gray-200 divide-y divide-gray-200 dark:divide-gray-700 font-DanaMedium ul-plan-details">
+                        <li class="pt-2">مدیریت گروه</li>
+                        <li class="pt-2">نقره‌ای، طلایی، الماسی، پریمیوم</li>
+                        <li class="pt-2">مدیریت اعضا، دستورات سفارشی، مدیریت چندگانه</li>
+                        <li class="pt-2">فیلتر اسپم و محتوای نامناسب با هوش مصنوعی</li>
+                        <li class="pt-2">گزارش‌های دقیق از فعالیت گروه</li>
+                        <li class="pt-2">پشتیبانی مستقیم کراپلود</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab 3: Comments -->
+            <div class="tab-content tab3 hidden w-full">
+                <div class="flex items-center gap-x-2 mb-6">
+                    <h2 class="font-DanaMedium text-2xl">
+                        دیدگاه‌ها
+                    </h2>
+                    <p class="text-sm text-blue-500">
+                        (28 دیدگاه)
+                    </p>
+                </div>
+                <div class="w-full flex flex-col md:flex-row items-start gap-10">
+                    <!-- SUBMIT COMMENT -->
+                    <div class="lg:w-1/4 flex flex-col w-full">
+                        <p class="font-DanaMedium text-lg mb-2">ثبت دیدگاه</p>
+                        <input type="text" placeholder="عنوان" class="tailwind-input">
+                        <p class="text-gray-500 dark:text-white text-sm mb-4">این افزونه را به دیگران پیشنهاد:</p>
+                        <div class="grid grid-cols-12 child:col-span-6 gap-4 child:w-full child:flex child:items-center child:justify-center child:gap-x-2 child:rounded-lg child:shadow child:py-2 mb-5 child:font-DanaMedium child:duration-300 child:transition-all">
+                            <button class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:ring-white/20 dark:focus:ring-green-600">
+                                <svg class="w-5 h-5">
+                                    <use href="#hand-up"></use>
+                                </svg>
+                                می‌کنم
+                            </button>
+                            <button class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:ring-white/20 dark:focus:ring-[#EF4343]">
+                                <svg class="w-5 h-5">
+                                    <use href="#hand-down"></use>
+                                </svg>
+                                نمی‌کنم
+                            </button>
+                        </div>
+                        <textarea class="h-24 tailwind-input" placeholder="متن دیدگاه"></textarea>
+                        <button class="rounded-lg p-2 bg-blue-500 hover:bg-blue-600 text-white transition-all">ثبت</button>
+                    </div>
+
+                    <!-- ALL COMMENTS -->
+                    <ul class="lg:w-3/4 flex flex-col gap-y-2 child:w-full">
+                        <!-- COMMENT ITEM -->
+                        <li class="child:flex py-4 border-b border-gray-200 dark:border-b-gray-200/20 child:border-white/20">
+                            <div class="flex items-center gap-x-2">
+                                <h2 class="font-DanaMedium text-lg mb-1">سرعت و امکانات بی‌نظیر</h2>
+                                <span class="px-2 py-1 mb-2 rounded-lg bg-yellow-500 text-white text-xs">کاربر پریمیوم</span>
+                            </div>
+                            <div class="flex-col">
+                                <h2 class="flex items-center gap-x-1 text-green-500 mb-4">
+                                    <svg class="w-4 h-4">
+                                        <use href="#hand-up"></use>
+                                    </svg>
+                                    پیشنهاد می‌شود
+                                </h2>
+                                <p class="text-gray-500 dark:text-gray-200 mb-2">
+                                    این افزونه سرعتی فوق‌العاده داره و امکانات کاملی مثل مدیریت اعضا و فیلتر محتوا بهش اضافه شده. برای گروه‌های بزرگ عالیه.
+                                </p>
+                            </div>
+                            <div class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between">
+                                <div class="flex items-center gap-x-4 text-gray-400 text-sm">
+                                    <p>15 تیر 1403</p>
+                                    <p>امین رستگار</p>
+                                </div>
+                                <div class="flex items-center gap-x-2 flex-wrap mt-2">
+                                    <p class="text-gray-400 text-sm">آیا این دیدگاه برایتان مفید بود؟</p>
+                                    <div class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm">
+                                        <button class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600">58
+                                            <svg class="w-4 h-4">
+                                                <use href="#hand-up"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]">1
+                                            <svg class="w-4 h-4">
+                                                <use href="#hand-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- COMMENT ITEM -->
+                        <li class="child:flex py-4 border-b border-gray-200 dark:border-b-gray-200/20 child:border-white/20">
+                            <div class="flex items-center gap-x-2">
+                                <h2 class="font-DanaMedium text-lg mb-1">پشتیبانی اختصاصی و مدیریت آسان</h2>
+                                <span class="px-2 py-1 mb-2 rounded-lg bg-yellow-500 text-white text-xs">کاربر پریمیوم</span>
+                            </div>
+                            <div class="flex-col">
+                                <h2 class="flex items-center gap-x-1 text-green-500 mb-4">
+                                    <svg class="w-4 h-4">
+                                        <use href="#hand-up"></use>
+                                    </svg>
+                                    پیشنهاد می‌شود
+                                </h2>
+                                <p class="text-gray-500 dark:text-gray-200 mb-2">
+                                    پشتیبانی خیلی سریع و حرفه‌ای دارن و مدیریت گروه با این افزونه خیلی ساده شده.
+                                </p>
+                            </div>
+                            <div class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between">
+                                <div class="flex items-center gap-x-4 text-gray-400 text-sm">
+                                    <p>18 تیر 1403</p>
+                                    <p>نرگس احمدی</p>
+                                </div>
+                                <div class="flex items-center gap-x-2 flex-wrap mt-2">
+                                    <p class="text-gray-400 text-sm">آیا این دیدگاه برایتان مفید بود؟</p>
+                                    <div class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm">
+                                        <button class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600">45
+                                            <svg class="w-4 h-4">
+                                                <use href="#hand-up"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]">0
+                                            <svg class="w-4 h-4">
+                                                <use href="#hand-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- COMMENT ITEM -->
+                        <li class="child:flex py-4 border-b border-gray-200 dark:border-b-gray-200/20 child:border-white/20">
+                            <div class="flex items-center gap-x-2">
+                                <h2 class="font-DanaMedium text-lg mb-1">بهترین ابزار برای گروه‌ها</h2>
+                                <span class="px-2 py-1 mb-2 rounded-lg bg-yellow-500 text-white text-xs">کاربر پریمیوم</span>
+                            </div>
+                            <div class="flex-col">
+                                <h2 class="flex items-center gap-x-1 text-green-500 mb-4">
+                                    <svg class="w-4 h-4">
+                                        <use href="#hand-up"></use>
+                                    </svg>
+                                    پیشنهاد می‌شود
+                                </h2>
+                                <p class="text-gray-500 dark:text-gray-200 mb-2">
+                                    امکانات گزارش‌گیری و مدیریت چندگانه این افزونه خیلی به کارم اومد. بهترین انتخاب برای گروه‌های حرفه‌ای.
+                                </p>
+                            </div>
+                            <div class="mt-2 lg:mt-0 flex-col lg:flex-row gap-y-2 lg:items-center justify-between">
+                                <div class="flex items-center gap-x-4 text-gray-400 text-sm">
+                                    <p>20 تیر 1403</p>
+                                    <p>علی کرمی</p>
+                                </div>
+                                <div class="flex items-center gap-x-2 flex-wrap mt-2">
+                                    <p class="text-gray-400 text-sm">آیا این دیدگاه برایتان مفید بود؟</p>
+                                    <div class="flex items-center gap-x-2 child:flex child:items-center child:gap-x-1 child:rounded-lg child:p-2 child:font-DanaMedium child:duration-300 child:transition-all child:text-sm">
+                                        <button class="text-green-600 ring-transparent ring-1 focus:ring-green-600 dark:focus:ring-green-600">35
+                                            <svg class="w-4 h-4">
+                                                <use href="#hand-up"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="text-red-500 ring-transparent ring-1 focus:ring-[#EF4343] dark:focus:ring-[#EF4343]">3
+                                            <svg class="w-4 h-4">
+                                                <use href="#hand-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section><br><br><br>
+    </main>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <div class="search-overlay"></div>
+
+    <script src="{% static './scripts/app.js' %}"></script>
+    <script src="{% static './swiper/swiper.js' %}"></script>
+    <script>
+        // Initialize Swiper for Gallery
+        const gallerySwiper = new Swiper('.gallery-swiper', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            pagination: {
+                el: '.gallery-swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Initialize Swiper for Mobile Slider
+        const mobileSlider = new Swiper('.MobileProductSlider', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.MobileProductSlider-pagination',
+                clickable: true,
+            },
+        });
+
+        // Tab Switching
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('text-blue-500');
+                    btn.classList.add('text-gray-500', 'dark:text-gray-300');
+                });
+                button.classList.remove('text-gray-500', 'dark:text-gray-300');
+                button.classList.add('text-blue-500');
+
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                const target = button.getAttribute('data-target');
+                document.querySelector(`.${target}`).classList.remove('hidden');
+            });
+        });
+
+        // Toggle FAQ
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.setAttribute('data-state', 'minus');
+                icon.innerHTML = '<use href="#minus"></use>';
+            } else {
+                answer.classList.add('hidden');
+                icon.setAttribute('data-state', 'plus');
+                icon.innerHTML = '<use href="#plus"></use>';
+            }
+        }
+    </script>
+{% endblock %}

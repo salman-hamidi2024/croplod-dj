@@ -1,0 +1,868 @@
+<!-- Header -->
+<header class="header bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-800 dark:to-gray-900">
+    <!-- Desktop -->
+    <div class="container mt-5 hidden flex-col gap-y-6 lg:flex">
+        <!-- TOPBAR -->
+        <div class="flex items-center justify-between">
+            <!-- Search Box -->
+            <div class="relative z-20">
+                <!-- INPUT -->
+                <div class="search-btn-open flex gap-x-2 app-border bg-gray-100 dark:bg-gray-900 p-1 rounded-xl cursor-pointer ring-blue-400 w-84 transition-all duration-300">
+                    <svg class="size-6 p-1.5 flex-center text-white bg-blue-500 rounded-lg w-9 h-9">
+                        <use href="#search" />
+                    </svg>
+                    <input placeholder="جستجو در کراپلود..." type="text" class="bg-transparent text-gray-800 dark:text-gray-100 focus:outline-none">
+                </div>
+                <!-- Search Modal -->
+                <div class="search-modal space-y-4 bg-white dark:bg-gray-900 rounded-xl p-4 z-50">
+                    <!-- Result -->
+                    <div>
+                        <span class="flex items-center text-sm gap-x-1 text-gray-800 dark:text-gray-100">
+                            <p>نتیجه جستجو : <span class="font-DanaMedium text-blue-500 dark:text-blue-400">ربات فروشگاهی</span></p>
+                        </span>
+                        <ul class="pt-4 text-gray-800 dark:text-gray-100 flex flex-col gap-y-4 child:flex-between child:cursor-pointer">
+                            <li>
+                                <a href="#" class="flex items-center gap-x-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                    <svg class="size-5">
+                                        <use href="#search" />
+                                    </svg>
+                                    ربات فروشگاهی
+                                </a>
+                                <svg class="size-4">
+                                    <use href="#arrow-up-right" />
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center gap-x-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                    <svg class="size-5">
+                                        <use href="#search" />
+                                    </svg>
+                                    افزونه فروشگاهی
+                                </a>
+                                <svg class="size-4">
+                                    <use href="#arrow-up-right" />
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center gap-x-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                    <svg class="size-5">
+                                        <use href="#search" />
+                                    </svg>
+                                    پلن افزونه فروشگاهی
+                                </a>
+                                <svg class="size-4">
+                                    <use href="#arrow-up-right" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Trend -->
+                    <div class="pt-4">
+                        <span class="flex items-center gap-x-1 text-sm text-gray-800 dark:text-gray-100">
+                            <svg class="size-4">
+                                <use href="#fire" />
+                            </svg>
+                            <p>جستجوهای پرطرفدار:</p>
+                        </span>
+                        <ul class="w-full flex items-center gap-1.5 mt-3 child:search-modal-list-item child:bg-gray-100 dark:child:bg-gray-800 child:rounded-lg child:px-3 child:py-1">
+                            <li>
+                                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">پلن‌ها</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">افزونه‌ها</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">راهنما</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Logo -->
+            <a href="index.html" class="flex flex-col text-center ml-20">
+                <div class="logos-box">
+                    <img src="{% static 'images/slider/png-croo.png' %}" alt="لوگو کراپلود" class="logo-croplod h-12">
+                    <span class="font-DanaDemiBold text-3xl flex items-center">
+                        <span class="md:ms-2 dark:text-gray-400">کراپلود</span> بات
+                    </span>
+                </div>
+            </a>
+            <!-- Action -->
+            <div class="flex items-center gap-x-3">
+                <!-- LOGIN -->
+                <button class="hidden flex-center py-2 px-4 app-border rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300">
+                    <a href="#" class="flex items-center gap-x-2">
+                        <p>ورود | ثبت‌نام</p>
+                        <svg class="size-5">
+                            <use href="#arrow-left-end" />
+                        </svg>
+                    </a>
+                </button>
+                <!-- Account Btn -->
+                <button class="group relative flex-center py-2 px-4 app-border rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300">
+                    <a href="dashboard.html" class="flex items-center gap-x-1">
+                        <svg class="size-5">
+                            <use href="#user" />
+                        </svg>
+                        <p>حساب کاربری</p>
+                    </a>
+                    <div class="absolute dark:border-none border border-gray-100 w-52 p-2 bg-white text-gray-800 dark:text-gray-100 flex flex-col gap-y-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-14 transition-all duration-300 dark:bg-gray-900 top-20 rounded-xl text-base overflow-y-auto max-h-64 z-50 child:transition-all child:py-1.5 child:px-2 child:rounded-lg child:w-full">
+                        <a href="dashboard-orders.html" class="flex items-center gap-x-2 hover:bg-blue-500 hover:text-white">
+                            <svg class="h-5 w-5">
+                                <use href="#user"></use>
+                            </svg>
+                            ربات‌های من
+                        </a>
+                        <a href="dashboard-messages.html" class="flex items-center gap-x-2 hover:bg-blue-500 hover:text-white">
+                            <svg class="h-5 w-5">
+                                <use href="#envelope"></use>
+                            </svg>
+                            لیست پیام‌ها
+                        </a>
+                        <a href="dashboard-account.html" class="flex items-center gap-x-2 hover:bg-blue-500 hover:text-white">
+                            <svg class="h-5 w-5">
+                                <use href="#cog"></use>
+                            </svg>
+                            اطلاعات کاربری
+                        </a>
+                        <a href="#" class="flex items-center gap-x-2 hover:bg-red-500 dark:hover:bg-red-500 hover:text-white">
+                            <svg class="h-5 w-5">
+                                <use href="#arrow-left-end"></use>
+                            </svg>
+                            خروج از حساب
+                        </a>
+                    </div>
+                </button>
+                <!-- Toggle theme -->
+                <button class="toggle-theme flex-center p-2 app-border rounded-lg bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300">
+                    <svg class="inline-block dark:hidden size-6">
+                        <use href="#moon" />
+                    </svg>
+                    <svg class="hidden dark:inline size-6">
+                        <use href="#sun" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- NAVBAR -->
+        <div class="relative flex-between h-16 bg-gray-900 dark:bg-gray-800 rounded-2xl text-gray-100 px-10 z-10">
+            <!-- MENU -->
+            <ul class="flex items-center gap-x-8">
+                <li class="menu-item">
+                    <a href="index.html" class="menu-item_link hover:text-blue-400 transition-colors">
+                        صفحه اصلی
+                    </a>
+                </li>
+                <!-- MENU ITEM --- Mega Menu -->
+                <li class="menu-item megamenu-link">
+                    <a href="" class="menu-item_link flex items-center justify-center gap-x-1 hover:text-blue-400 transition-colors">
+                        مشاهده پلن‌ها
+                        <svg class="size-4">
+                            <use href="#chevron" />
+                        </svg>
+                    </a>
+                    <div class="megamenu bg-white dark:bg-gray-900 rounded-xl p-4 z-50">
+                        <!-- RIGHT MENU -->
+                        <ul class="megamenu_category">
+                            <li class="megamenu_category-item active">
+                                <img src="{% static '/images/category/free.png' %}" alt="" class="plans-icon">
+                                <a href="">رایگان</a>
+                            </li>
+                            <li class="megamenu_category-item">
+                                <img src="{% static '/images/category/plus.png' %}" alt="" class="plans-icon">
+                                <a href="">پلاس</a>
+                            </li>
+                            <li class="megamenu_category-item">
+                                <img src="{% static '/images/category/silver.png' %}" alt="" class="plans-icon">
+                                <a href="">نقره‌ای</a>
+                            </li>
+                            <li class="megamenu_category-item">
+                                <img src="{% static '/images/category/gold.png' %}" alt="" class="plans-icon">
+                                <a href="">طلایی</a>
+                            </li>
+                            <li class="megamenu_category-item">
+                                <img src="{% static '/images/category/diamond.png' %}" alt="" class="plans-icon">
+                                <a href="">الماسی</a>
+                            </li>
+                            <li class="megamenu_category-item">
+                                <img src="{% static '/images/category/premium.png' %}" alt="" class="plans-icon">
+                                <a href="">پریمیوم</a>
+                            </li>
+                        </ul>
+                        <div class="megamenu_left">
+                            <ul class="megamenu_left-item active">
+                                <div class="plan-details-nav"><br>
+                                    <h2 class="megamenu_left-title text-gray-800 dark:text-gray-100">امکانات پلن رایگان</h2><br>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ سرعت بسیار پایین</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ بدون افزونه کاربردی</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای تبلیغات و مزاحمت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد دکمه</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ بدون دکمه‌های شیشه‌ای</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ آپلود فایل تا 100 مگابایت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان تغییر متن‌های ربات</li>
+                                </div>
+                                <div class="image-plan-nav">
+                                    <div class="stars"></div>
+                                    <img src="{% static '/images/category/free.png' %}" alt="" class="plan-nav-icon">
+                                    <a href="/freeplanpage.html" class="tac group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">رایگان امتحان کنید</a>
+                                </div>
+                            </ul>
+                            <ul class="megamenu_left-item">
+                                <div class="plan-details-nav"><br>
+                                    <h2 class="megamenu_left-title text-gray-800 dark:text-gray-100">امکانات پلن پلاس</h2><br>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ سرعت پایین ربات</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ بدون افزونه کاربردی</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ بدون تبلیغات و مزاحمت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 10 دکمه و 20 زیر منو</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 7 منوی شیشه‌ای</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ آپلود فایل تا 200 مگابایت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای امکانات پلن قبل</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ تست رایگان 3 روزه</li>
+                                </div>
+                                <div class="image-plan-nav">
+                                    <img src="{% static '/images/category/plus.png' %}" alt="" class="plan-nav-icon">
+                                    <a href="/plusplanpage.html" class="tac group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                </div>
+                            </ul>
+                            <ul class="megamenu_left-item">
+                                <div class="plan-details-nav"><br>
+                                    <h2 class="megamenu_left-title text-gray-800 dark:text-gray-100">امکانات پلن نقره‌ای</h2><br>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ سرعت بالای ربات</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ افزونه‌های مدیریت گروه و پیام‌رسان</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 12 منوی شیشه‌ای</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 20 دکمه و 30 زیر منو</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ آپلود فایل تا 1 گیگابایت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای امکانات پلن قبل</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ تست رایگان 2 روزه</li>
+                                </div>
+                                <div class="image-plan-nav">
+                                    <img src="{% static '/images/category/silver.png' %}" alt="" class="plan-nav-icon">
+                                    <a href="/silverplanpage.html" class="tac group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                </div>
+                            </ul>
+                            <ul class="megamenu_left-item">
+                                <div class="plan-details-nav"><br>
+                                    <h2 class="megamenu_left-title text-gray-800 dark:text-gray-100">امکانات پلن طلایی</h2><br>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ سرعت نسبتاً بالای ربات</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ افزونه‌های آپلودر، دانلودر و آزمون‌ساز</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای افزونه‌های پلن‌های قبل</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 18 منوی شیشه‌ای</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 30 دکمه و 50 زیر منو</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ آپلود فایل تا 10 گیگابایت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ تست رایگان 2 روزه</li>
+                                </div>
+                                <div class="image-plan-nav">
+                                    <img src="{% static '/images/category/gold.png' %}" alt="" class="plan-nav-icon">
+                                    <a href="/goldplanpage.html" class="tac group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                </div>
+                            </ul>
+                            <ul class="megamenu_left-item">
+                                <div class="plan-details-nav"><br>
+                                    <h2 class="megamenu_left-title text-gray-800 dark:text-gray-100">امکانات پلن الماسی</h2><br>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ سرعت بسیار بالای ربات</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ افزونه‌های مدیریت کانال و مترجم</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای افزونه‌های پلن‌های قبل</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد 25 منوی شیشه‌ای</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ امکان ایجاد بی‌نهایت زیر منو</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ آپلود فایل تا 50 گیگابایت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ تست رایگان 1 روزه</li>
+                                </div>
+                                <div class="image-plan-nav">
+                                    <img src="{% static '/images/category/diamond.png' %}" alt="" class="plan-nav-icon">
+                                    <a href="/diamondplanpage.html" class="tac group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                </div>
+                            </ul>
+                            <ul class="megamenu_left-item">
+                                <div class="plan-details-nav"><br>
+                                    <h2 class="megamenu_left-title text-gray-800 dark:text-gray-100">امکانات پلن پریمیوم</h2><br>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ نهایت سرعت عملکرد ربات</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای تمامی افزونه‌ها</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ ایجاد دکمه و منو بدون محدودیت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ آپلود فایل‌ها بدون محدودیت</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای تست 12 ساعته رایگان</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ تبلیغ رایگان رباتتان در کراپلود</li>
+                                    <li class="text-gray-800 dark:text-gray-100">✓ دارای پشتیبانی فنی مستقیم کراپلود</li><br>
+                                </div>
+                                <div class="image-plan-nav">
+                                    <img src="{% static '/images/category/premium.png' %}" alt="" class="plan-nav-icon">
+                                    <a href="/premiumplanpage.html" class="tac group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="aboute-us.html" class="menu-item_link hover:text-blue-400 transition-colors">
+                        درباره ما
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{ url 'faq_questions' }" class="menu-item_link hover:text-blue-400 transition-colors">
+                        سوالات متداول
+                    </a>
+                </li>
+                <!-- MENU ITEM --- Solid submenu -->
+                <li class="menu-item group">
+                    <a class="menu-item_link cursor-pointer hover:text-blue-400 transition-colors">
+                        بیشتر
+                        <svg class="size-4 group-hover:rotate-180 duration-300">
+                            <use href="#chevron" />
+                        </svg>
+                    </a>
+                    <ul class="solid-menu bg-white dark:bg-gray-900 rounded-xl p-2 z-50">
+                        <li>
+                            <a href="dashboard.html" class="hover:text-blue-400">پنل کاربری</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="articles.html" class="menu-item_link hover:text-blue-400">
+                                وبلاگ
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="shop.html" class="hover:text-blue-400">
+                                فروشگاه
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="dashboard-orders.html" class="hover:text-blue-400">
+                                ربات‌های من
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-item_link hover:text-blue-400 transition-colors">
+                        تماس با ما
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="terms.html" class="menu-item_link hover:text-blue-400 transition-colors">
+                        قوانین و حریم خصوصی
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile -->
+    <div class="flex justify-center lg:hidden">
+        <!-- Top Navbar -->
+        <nav class="absolute top-0 inset-x-0 w-full h-16 px-4 dark:bg-gray-800 flex items-center justify-between">
+            <!-- Menu -->
+            <button class="open-menu-mobile flex-center p-2 app-border rounded-lg">
+                <svg class="size-6">
+                    <use href="#bars" />
+                </svg>
+            </button>
+            <div class="mobile-menu z-50 flex flex-col bg-white dark:bg-gray-900 rounded-xl p-4">
+                <!-- MENU MOBILE header -->
+                <div class="flex w-full items-center justify-between border-b-normal pb-4">
+                    <a href="index.html" class="text-xl font-DanaDemiBold">
+                        <span class="text-blue-500 dark:text-blue-400">کراپلود</span> بات
+                    </a>
+                    <button class="close-menu-mobile">
+                        <svg class="size-5 text-gray-500 dark:text-gray-100">
+                            <use href="#x-mark" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- MENU MOBILE CATEGORY & ACTION -->
+                <ul class="flex flex-col gap-y-2 text-gray-800 dark:text-gray-100 mt-4">
+                    <li>
+                        <span class="open-category mobile-menu-item">
+                            <svg class="size-5">
+                                <use href="#squares" />
+                            </svg>
+                            <a href="#">مشاهده همه پلن‌ها</a>
+                        </span>
+                        <!-- MENU CATEGORY SLIDE -->
+                        <div class="category-slide bg-white dark:bg-gray-900 rounded-xl p-4">
+                            <div class="w-full border-b-normal pb-4">
+                                <span class="close-category-slide flex items-center gap-x-1 cursor-pointer text-gray-800 dark:text-gray-100">
+                                    <svg class="size-4">
+                                        <use href="#arrow" />
+                                    </svg>
+                                    پلن‌ها
+                                </span>
+                            </div>
+                            <ul class="child:flex pt-4 child:cursor-pointer space-y-2">
+                                <li>
+                                    <div class="relative plans-cat open-detail-category">
+                                        <span class="mobile-menu-category-badge-premium">
+                                            رایگان
+                                        </span>
+                                        <img src="{% static '/images/category/free.png' %}" alt="">
+                                    </div>
+                                    <!-- Mobile SLIDE -->
+                                    <div class="detail-category">
+                                        <span class="close-detail-category flex-center gap-x-1 mx-4 bg-gray-100 dark:bg-gray-800 rounded p-2 cursor-pointer text-gray-800 dark:text-gray-100">
+                                            رایگان
+                                            <svg class="size-4">
+                                                <use href="#arrow" />
+                                            </svg>
+                                        </span>
+                                        <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-gray-700 child:px-4 text-gray-800 dark:text-gray-100">
+                                            <h2 class="megamenu_left-title">امکانات پلن رایگان</h2><br>
+                                            <li>✓ سرعت بسیار پایین</li>
+                                            <li>✓ بدون افزونه کاربردی</li>
+                                            <li>✓ دارای تبلیغات و مزاحمت</li>
+                                            <li>✓ امکان ایجاد دکمه</li>
+                                            <li>✓ بدون دکمه‌های شیشه‌ای</li>
+                                            <li>✓ آپلود فایل تا 100 مگابایت</li>
+                                            <li>✓ امکان تغییر متن‌های ربات</li>
+                                        </ul>
+                                        <div class="image-plan-nav">
+                                            <a href="/freeplanpage.html" class="tac ma-1px group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="relative plans-cat open-detail-category">
+                                        <span class="mobile-menu-category-badge-premium">
+                                            پلاس
+                                        </span>
+                                        <img src="{% static 'images/category/plus.png' %}" alt="">
+                                    </div>
+                                    <!-- Mobile SLIDE -->
+                                    <div class="detail-category">
+                                        <span class="close-detail-category flex-center gap-x-1 mx-4 bg-gray-100 dark:bg-gray-800 rounded p-2 cursor-pointer text-gray-800 dark:text-gray-100">
+                                            پلاس
+                                            <svg class="size-4">
+                                                <use href="#arrow" />
+                                            </svg>
+                                        </span>
+                                        <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-gray-700 child:px-4 text-gray-800 dark:text-gray-100">
+                                            <h2 class="megamenu_left-title">امکانات پلن پلاس</h2><br>
+                                            <li>✓ سرعت پایین ربات</li>
+                                            <li>✓ بدون افزونه کاربردی</li>
+                                            <li>✓ بدون تبلیغات و مزاحمت</li>
+                                            <li>✓ امکان ایجاد 10 دکمه و 20 زیر منو</li>
+                                            <li>✓ امکان ایجاد 7 منوی شیشه‌ای</li>
+                                            <li>✓ آپلود فایل تا 200 مگابایت</li>
+                                            <li>✓ دارای امکانات پلن قبل</li>
+                                            <li>✓ تست رایگان 3 روزه</li>
+                                        </ul>
+                                        <div class="image-plan-nav">
+                                            <a href="/plusplanpage.html" class="tac ma-1px group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="relative plans-cat open-detail-category">
+                                        <span class="mobile-menu-category-badge-premium">
+                                            نقره‌ای
+                                        </span>
+                                        <img src="{% static 'images/category/silver.png' %}" alt="">
+                                    </div>
+                                    <!-- Mobile SLIDE -->
+                                    <div class="detail-category">
+                                        <span class="close-detail-category flex-center gap-x-1 mx-4 bg-gray-100 dark:bg-gray-800 rounded p-2 cursor-pointer text-gray-800 dark:text-gray-100">
+                                            نقره‌ای
+                                            <svg class="size-4">
+                                                <use href="#arrow" />
+                                            </svg>
+                                        </span>
+                                        <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-gray-700 child:px-4 text-gray-800 dark:text-gray-100">
+                                            <h2 class="megamenu_left-title">امکانات پلن نقره‌ای</h2><br>
+                                            <li>✓ سرعت بالای ربات</li>
+                                            <li>✓ افزونه‌های مدیریت گروه و پیام‌رسان</li>
+                                            <li>✓ امکان ایجاد 12 منوی شیشه‌ای</li>
+                                            <li>✓ امکان ایجاد 20 دکمه و 30 زیر منو</li>
+                                            <li>✓ آپلود فایل تا 1 گیگابایت</li>
+                                            <li>✓ دارای امکانات پلن قبل</li>
+                                            <li>✓ تست رایگان 2 روزه</li>
+                                        </ul>
+                                        <div class="image-plan-nav">
+                                            <a href="/silverplanpage.html" class="tac ma-1px group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="relative plans-cat open-detail-category">
+                                        <span class="mobile-menu-category-badge-premium">
+                                            طلایی
+                                        </span>
+                                        <img src="{% static 'images/category/gold.png' %}" alt="">
+                                    </div>
+                                    <!-- Mobile SLIDE -->
+                                    <div class="detail-category">
+                                        <span class="close-detail-category flex-center gap-x-1 mx-4 bg-gray-100 dark:bg-gray-800 rounded p-2 cursor-pointer text-gray-800 dark:text-gray-100">
+                                            طلایی
+                                            <svg class="size-4">
+                                                <use href="#arrow" />
+                                            </svg>
+                                        </span>
+                                        <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-gray-700 child:px-4 text-gray-800 dark:text-gray-100">
+                                            <h2 class="megamenu_left-title">امکانات پلن طلایی</h2><br>
+                                            <li>✓ سرعت نسبتاً بالای ربات</li>
+                                            <li>✓ افزونه‌های آپلودر، دانلودر و آزمون‌ساز</li>
+                                            <li>✓ دارای افزونه‌های پلن‌های قبل</li>
+                                            <li>✓ امکان ایجاد 18 منوی شیشه‌ای</li>
+                                            <li>✓ امکان ایجاد 30 دکمه و 50 زیر منو</li>
+                                            <li>✓ آپلود فایل تا 10 گیگابایت</li>
+                                            <li>✓ تست رایگان 2 روزه</li>
+                                        </ul>
+                                        <div class="image-plan-nav">
+                                            <a href="/goldplanpage.html" class="tac ma-1px group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="relative plans-cat open-detail-category">
+                                        <span class="mobile-menu-category-badge-premium font-MorabbaMedium">
+                                            الماسی
+                                        </span>
+                                        <img src="{% static 'images/category/diamond.png' %}" alt="">
+                                    </div>
+                                    <!-- Mobile SLIDE -->
+                                    <div class="detail-category">
+                                        <span class="close-detail-category flex-center gap-x-1 mx-4 bg-gray-100 dark:bg-gray-800 rounded p-2 cursor-pointer text-gray-800 dark:text-gray-100">
+                                            الماسی
+                                            <svg class="size-4">
+                                                <use href="#arrow" />
+                                            </svg>
+                                        </span>
+                                        <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-gray-700 child:px-4 text-gray-800 dark:text-gray-100">
+                                            <h2 class="megamenu_left-title">امکانات پلن الماسی</h2><br>
+                                            <li>✓ سرعت بسیار بالای ربات</li>
+                                            <li>✓ افزونه‌های مدیریت کانال و مترجم</li>
+                                            <li>✓ دارای افزونه‌های پلن‌های قبل</li>
+                                            <li>✓ امکان ایجاد 25 منوی شیشه‌ای</li>
+                                            <li>✓ امکان ایجاد بی‌نهایت زیر منو</li>
+                                            <li>✓ آپلود فایل تا 50 گیگابایت</li>
+                                            <li>✓ تست رایگان 1 روزه</li>
+                                        </ul>
+                                        <div class="image-plan-nav">
+                                            <a href="/diamondplanpage.html" class="tac ma-1px group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="relative open-detail-category premium">
+                                        <span class="font-MorabbaMedium mobile-menu-category-badge-premium">
+                                            پریمیوم
+                                        </span>
+                                        <img src="{% static 'images/category/premium.png' %}" alt="">
+                                    </div>
+                                    <!-- Mobile SLIDE -->
+                                    <div class="detail-category">
+                                        <span class="close-detail-category flex-center gap-x-1 mx-4 bg-gray-100 dark:bg-gray-800 rounded p-2 cursor-pointer text-gray-800 dark:text-gray-100">
+                                            پریمیوم
+                                            <svg class="size-4">
+                                                <use href="#arrow" />
+                                            </svg>
+                                        </span>
+                                        <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-gray-700 child:px-4 text-gray-800 dark:text-gray-100">
+                                            <h2 class="megamenu_left-title">امکانات پلن پریمیوم</h2><br>
+                                            <li>✓ نهایت سرعت عملکرد ربات</li>
+                                            <li>✓ دارای تمامی افزونه‌ها</li>
+                                            <li>✓ ایجاد دکمه و منو بدون محدودیت</li>
+                                            <li>✓ آپلود فایل‌ها بدون محدودیت</li>
+                                            <li>✓ دارای تست 12 ساعته رایگان</li>
+                                            <li>✓ تبلیغ رایگان رباتتان در کراپلود</li>
+                                            <li>✓ دارای پشتیبانی فنی مستقیم کراپلود</li><br>
+                                        </ul>
+                                        <div class="image-plan-nav">
+                                            <a href="/premiumplanpage.html" class="tac ma-1px group shadow-xl text-sm md:text-base flex items-center justify-center gap-x-1.5 px-2 h-10 md:px-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 min-w-fit">ادامه و خرید</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <svg class="size-5">
+                            <use href="#user" />
+                        </svg>
+                        <a href="dashboard.html">حساب کاربری</a>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <svg class="size-5">
+                            <use href="#check-badge" />
+                        </svg>
+                        <a href="aboute-us.html">درباره ما</a>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <svg class="size-5">
+                            <use href="#phone" />
+                        </svg>
+                        <a href="contact-us.html">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <a href="index.html" class="flex flex-col text-center">
+                <span class="font-DanaDemiBold text-3xl flex items-center">
+                    <span class="text-blue-500 dark:text-blue-400">کراپلود</span> بات
+                </span>
+            </a>
+            <!-- Toggle theme -->
+            <button class="toggle-theme flex-center p-2 app-border rounded-lg bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800">
+                <svg class="inline-block dark:hidden size-6">
+                    <use href="#moon" />
+                </svg>
+                <svg class="hidden dark:inline size-6">
+                    <use href="#sun" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Search bar -->
+        <button class="open-mobile_search-modal flex items-center gap-x-2">
+            <svg class="size-6">
+                <use href="#search" />
+            </svg>
+            <p>جستجو در <span class="font-DanaDemiBold">کراپلود</span></p>
+        </button>
+        <!-- Search Modal -->
+        <div class="mobile_search-modal bg-white dark:bg-gray-900 rounded-xl p-4">
+            <!-- TOP -->
+            <div class="w-full flex items-center gap-x-2">
+                <button class="w-full flex items-center gap-x-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 py-2 px-4 rounded-xl">
+                    <svg class="size-6">
+                        <use href="#search" />
+                    </svg>
+                    <input type="text" placeholder="جستجو در کراپلود" class="bg-transparent focus:outline-none text-gray-800 dark:text-gray-100">
+                </button>
+                <svg class="size-6 close-mobile_search-modal text-gray-800 dark:text-gray-100">
+                    <use href="#x-mark" />
+                </svg>
+            </div>
+            <div class="w-full space-y-4">
+                <!-- Result -->
+                <div>
+                    <span class="flex items-center text-sm gap-x-1 text-gray-800 dark:text-gray-100">
+                        <p>نتیجه جستجو : <span class="font-DanaMedium text-blue-500 dark:text-blue-400">ربات مدیریت کانال</span></p>
+                    </span>
+                    <ul class="pt-4 text-gray-800 dark:text-gray-100 flex flex-col gap-y-4 child:flex-between child:cursor-pointer">
+                        <li>
+                            <a href="#" class="flex items-center gap-x-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <svg class="size-5">
+                                    <use href="#search" />
+                                </svg>
+                                مدیریت کانال
+                            </a>
+                            <svg class="size-4">
+                                <use href="#arrow-up-right" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-x-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <svg class="size-5">
+                                    <use href="#search" />
+                                </svg>
+                                افزونه مدیریت کانال
+                            </a>
+                            <svg class="size-4">
+                                <use href="#arrow-up-right" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-x-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <svg class="size-5">
+                                    <use href="#search" />
+                                </svg>
+                                راهنمای استفاده از افزونه کانال
+                            </a>
+                            <svg class="size-4">
+                                <use href="#arrow-up-right" />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Trend -->
+                <div class="pt-4">
+                    <span class="flex items-center gap-x-1 text-sm text-gray-800 dark:text-gray-100">
+                        <svg class="size-4">
+                            <use href="#fire" />
+                        </svg>
+                        <p>جستجوهای پرطرفدار:</p>
+                    </span>
+                    <ul class="w-full flex items-center gap-1.5 mt-3 child:search-modal-list-item child:bg-gray-100 dark:child:bg-gray-800 child:rounded-lg child:px-3 child:py-1">
+                        <li>
+                            <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">افزونه‌ها</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">توکن چیست؟</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">ربات فروشگاهی</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400">پلن پریمیوم</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Navbar -->
+        <ul class="bottom-navbar flex justify-around items-center">
+            <li class="text-blue-500 dark:text-blue-400 font-DanaMedium">
+                <svg class="size-5">
+                    <use href="#home" />
+                </svg>
+                <a href="index.html">خانه</a>
+            </li>
+            <li>
+                <svg class="size-5">
+                    <use href="#squares" />
+                </svg>
+                <a href="shop.html">فروشگاه</a>
+            </li>
+            <li>
+                <svg class="size-5">
+                    <use href="#user" />
+                </svg>
+                <a href="dashboard.html">حساب من</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="md:container my-12">
+    <div class="relative padding-footer w-full bg-gray-900 dark:bg-gray-800 text-white rounded-2xl p-8 lg:p-12">
+        <div class="flex flex-col md:flex-row items-start justify-between gap-y-8">
+
+            <!-- توضیح کوتاه -->
+            <div class="flex-1 pr-3 max-w-md">
+                <h2 class="font-DanaMedium text-2xl mb-4">درباره کراپلود بات</h2>
+                <p class="leading-8 text-gray-300 text-base-max">
+                    کراپلود بات یکی از سرویس‌های اصلی مجموعه کراپلود است که با هدف ارائه راهکارهای دیجیتال ساده و
+                    حرفه‌ای در حوزه ربات‌های تلگرام طراحی شده است.
+                    ما با تمرکز روی <strong>نوآوری، سرعت و کاربرپسندی</strong> بستری فراهم کرده‌ایم که هر فردی بدون
+                    نیاز به دانش برنامه‌نویسی بتواند ربات‌های قدرتمند تلگرامی بسازد و مدیریت کند.
+                </p>
+            </div>
+
+            <!-- لینک‌های سریع -->
+            <div class="flex-1 pr-3">
+                <h2 class="font-DanaMedium text-xl mb-3">دسترسی سریع</h2><br>
+                <div class="flex gap-x-10">
+                    <ul class="space-y-2 text-gray-400 text-sm child-hover:text-blue-500">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="about-us.html">درباره ما</a></li>
+                        <li><a href="shop.html">فروشگاه</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="{ url 'faq_questions' }">سوالات متداول</a></li>
+                    </ul>
+                    <ul class="space-y-2 text-gray-400 text-sm child-hover:text-blue-500">
+                        <li><a href="contact-us.html">تماس با ما</a></li>
+                        <li><a href="login.html">ورود / ثبت‌نام</a></li>
+                        <li><a href="terms.html">قوانین و مقررات</a></li>
+                        <li><a href="dashboard.html">پنل کاربری</a></li>
+                        <li><a href="extensions.html">افزونه‌ها</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- اطلاعات تماس -->
+            <div class="flex-1 pr-3">
+                <h2 class="font-DanaMedium text-xl mb-3">تماس با ما</h2><br>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><strong>شماره تماس :</strong> <span dir="ltr">+989210373679</span></li>
+                    <li><strong>پشتیبانی 24 ساعته :</strong> <span dir="ltr">+989350123456</span></li>
+                    <li><strong>ایمیل :</strong> croplod@gmail.com</li>
+                    <li><strong>پشتیبانی ایمیل :</strong> support@croplod.com</li>
+                    <li><strong>آدرس دفتر مرکزی :</strong> زاهدان، پارک علم و فناوری، ساختمان نوآوران، طبقه دوم</li>
+                    <li><strong>ساعات کاری :</strong> شنبه تا چهارشنبه 9 الی 18 | پنجشنبه 9 الی 14</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- پایین فوتر -->
+        <div
+            class="w-full rounded-xl flex flex-col md:flex-row items-center justify-between p-4 mt-6">
+            <a href="#" class="text-gray-400 text-sm hover:text-blue-400 mt-3 md:mt-0">
+                بازگشت به بالا ↑
+            </a>
+        </div>
+    </div>
+</footer><br>

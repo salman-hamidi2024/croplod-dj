@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{% static '/vite.svg' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کراپلود | ربات های تلگرامی</title>
+    <link rel="stylesheet" href="{% static './styles/app.css' %}">
+    <!-- link -->
+    <link rel="stylesheet" href="{% static './swiper/swiper.css' %}">
+    <!-- ==========================  DARK MODE SCRIPT ============================= -->
+    <script type="text/javascript">
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- ALL ICONS  -->
+    <svg class="hidden">
+        <!-- تمام آیکون‌ها مانند قبل باقی می‌مانند -->
+    </svg>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <nav class="flex mt-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                    <a href="index.html"
+                        class="inline-flex items-center text-sm gap-x-1 text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                        title="بازگشت به صفحه اصلی" rel="home">
+                        <svg class="size-4 mb-0.5" aria-hidden="true">
+                            <use href="#home" />
+                        </svg>
+                        صفحه اصلی
+                    </a>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="ms-1 text-sm text-gray-500 md:ms-2 dark:text-gray-400">افزونه‌ها</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Extensions Section -->
+        <section class="mt-8">
+            <h2 class="font-DanaDemiBold text-lg lg:text-2xl text-center mb-6">افزونه‌های کراپلود بات</h2>
+            <div class="grid grid-cols-1 xxs:grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                <!-- Extension Card 1 -->
+                <div class="product-card group bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col min-h-[500px]">
+                    <div class="relative h-[280px]">
+                        <img src="{% static '/images/extension1.jpg' %}" alt="افزونه چت پیشرفته"
+                            class="product-image-plan w-full h-full object-cover rounded-lg group-hover:opacity-0 transition-opacity duration-300">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-12 h-12 text-blue-600" aria-hidden="true">
+                                <use href="#rocket" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-y-4 mt-6 flex-grow justify-between">
+                        <div>
+                            <h3 class="font-DanaMedium text-lg">چت پیشرفته</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">افزونه‌ای برای مدیریت حرفه‌ای چت‌ها با
+                                قابلیت پاسخ خودکار و تحلیل پیام‌ها.</p>
+                        </div>
+                        <div class="product-card_price-wrapper flex items-center justify-between mt-4">
+                            <span class="text-gray-700 dark:text-gray-200 font-DanaMedium">۴۹,۰۰۰ تومان</span>
+                            <a href="purchase.html"
+                                class="tac bg-blue-600 text-white rounded-xl px-5 py-2.5 hover:bg-blue-700 transition-colors">خرید
+                                افزونه</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Extension Card 2 -->
+                <div class="product-card group bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col min-h-[500px]">
+                    <div class="relative h-[280px]">
+                        <img src="{% static '/images/extension2.jpg' %}" alt="افزونه آمارگیر"
+                            class="product-image-plan w-full h-full object-cover rounded-lg group-hover:opacity-0 transition-opacity duration-300">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-12 h-12 text-blue-600" aria-hidden="true">
+                                <use href="#star" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-y-4 mt-6 flex-grow justify-between">
+                        <div>
+                            <h3 class="font-DanaMedium text-lg">آمارگیر پیشرفته</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">ابزاری برای تحلیل آمار کاربران و فعالیت‌های
+                                ربات با گزارش‌های جامع.</p>
+                        </div>
+                        <div class="product-card_price-wrapper flex items-center justify-between mt-4">
+                            <span class="text-gray-700 dark:text-gray-200 font-DanaMedium">۷۹,۰۰۰ تومان</span>
+                            <a href="purchase.html"
+                                class="tac bg-blue-600 text-white rounded-xl px-5 py-2.5 hover:bg-blue-700 transition-colors">خرید
+                                افزونه</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Extension Card 3 -->
+                <div class="product-card group bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col min-h-[500px]">
+                    <div class="relative h-[280px]">
+                        <img src="{% static '/images/extension3.jpg' %}" alt="افزونه پرداخت امن"
+                            class="product-image-plan w-full h-full object-cover rounded-lg group-hover:opacity-0 transition-opacity duration-300">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-12 h-12 text-blue-600" aria-hidden="true">
+                                <use href="#squares" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-y-4 mt-6 flex-grow justify-between">
+                        <div>
+                            <h3 class="font-DanaMedium text-lg">پرداخت امن</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">افزونه‌ای برای افزودن درگاه پرداخت امن به
+                                ربات‌های تلگرامی.</p>
+                        </div>
+                        <div class="product-card_price-wrapper flex items-center justify-between mt-4">
+                            <span class="text-gray-700 dark:text-gray-200 font-DanaMedium">۹۹,۰۰۰ تومان</span>
+                            <a href="purchase.html"
+                                class="tac bg-blue-600 text-white rounded-xl px-5 py-2.5 hover:bg-blue-700 transition-colors">خرید
+                                افزونه</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <div class="search-overlay"></div>
+    <script src="{% static './swiper/swiper.js' %}"></script>
+    <script src="{% static './scripts/app.js' %}"></script>
+    <script type="module" src="{% static './scripts/slider.js' %}"></script>
+    <script src="{% static './scripts/timer.js' %}"></script>
+</body>
+
+</html>

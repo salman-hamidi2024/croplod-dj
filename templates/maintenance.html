@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{% static '/vite.svg' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کراپلود در حال بروزرسانی...</title>
+    <link rel="stylesheet" href="{% static './styles/app.css' %}">
+    <!-- link -->
+    <link rel="stylesheet" href="{% static './swiper/swiper.css' %}">
+    <!-- ==========================  DARK MODE SCRIPT ============================= -->
+    <script type="text/javascript">
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body>
+ 
+    <section class="w-full h-screen flex flex-col items-center justify-center">
+        <img class="float-animation max-w-sm object-cover h-96 " src="https://static.vecteezy.com/system/resources/previews/019/782/468/non_2x/3d-icon-internet-cyber-crime-error-file-free-png.png" alt=""> 
+        <div class="flex flex-col justify-center items-center gap-y-2 mt-2">
+            <h2 class="font-MorabbaMedium text-2xl">سایت در حال بروزرسانی میباشد.</h2>
+            <a href="index.html" class="flex items-center gap-x-1  text-blue-400 hover:text-blue-500 transition-all">
+                ما به زودی باز خواهیم گشت!
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>

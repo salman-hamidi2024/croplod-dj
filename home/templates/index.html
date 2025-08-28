@@ -1,0 +1,1167 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <!-- Main -->
+    <main class="relative">
+        <!-- CATEGORY -->
+        <div class="head-website">
+            <h2 class="font-Dana text-gray-800 h2-head-website">پیشرفته ترین ربات تلگرامی را با کراپلود بات بسازید.</h2>
+            <h1
+                class="h1-h-w text-xl md:text-2xl font-MorabbaMedium text-gray-800 dark:text-gray-50 font-MorabbaMedium text-gray-800">
+                همین حالا شروع کنید!</h1>
+            <a href="newbot.html" class="flex font-MorabbaMedium items-center bu-website-head cursor-pointer">
+                <p>ساخت ربات</p>
+            </a>
+        </div>
+        <section class="mx-4 lg:container mt-20">
+            <!-- SECTION TITLE -->
+            <div
+                class="flex flex-col gap-y-4 xs:flex-row items-center justify-between w-full text-center xs:text-start">
+                <div class="flex items-center gap-x-2 sm:gap-x-4">
+                    <span class="size-12 hidden xs:flex rounded-lg bg-white shadow-lg dark:bg-gray-800 flex-center">
+                        <svg class="size-7 text-gray-700 dark:text-gray-100">
+                            <use href="#squares"></use>
+                        </svg>
+                    </span>
+                    <div class="space-y-1 md:space-y-1">
+                        <h3 class="text-xl md:text-2xl font-MorabbaMedium text-gray-800 dark:text-gray-50">افزونه
+                            هـای
+                            <span class="text-blue-600 dark:text-blue-500">محبوب</span>
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-300">جدیدترین و بروزترین افزونه های کراپلود</p>
+                    </div>
+                </div>
+                <div class="w-full xs:w-auto flex justify-center items-center gap-x-2">
+                    <a href="shop.html"
+                        class="group shadow-xl text-sm md:text-base flex gap-x-1.5 items-center px-2 h-10 md:px-3 text-white bg-blue-600 rounded-xl">
+                        <p>مشاهده همه</p>
+                        <span
+                            class="w-7 h-7 rounded-full bg-blue-500 flex-center md:group-hover:-translate-x-1 transition-transform duration-300">
+                            <svg class="size-5">
+                                <use href="#arrow" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- ITEMS -->
+            <div
+                class="flex items-center justify-evenly flex-wrap mt-12 child:mb-8 gap-x-8 child:items-center child:flex-col child:duration-300 child:cursor-pointer child:gap-y-1 child:text-gray-800 child:dark:text-gray-300 child:relative">
+                <a href="shop.html" class="group flex">
+                    <img src="https://img.icons8.com/pulsar-gradient/1000/spellcheck.png"
+                        class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover group-hover:grayscale group-hover:opacity-90 duration-300"
+                        alt="category1" />
+                    <p class="pt-1 text-sm lg:text-lg line-clamp-1">
+                        فروشگاهی
+                    </p>
+                </a>
+                <a href="shop.html" class="group flex">
+                    <img src="https://img.icons8.com/pulsar-gradient/1000/bot.png"
+                        class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover group-hover:grayscale group-hover:opacity-90 duration-300"
+                        alt="category1" />
+                    <p class="pt-1 text-sm lg:text-lg line-clamp-1">
+                        آپلودر
+                    </p>
+                </a>
+                <a href="shop.html" class="group flex">
+                    <img src="https://img.icons8.com/pulsar-gradient/1000/video-playlist.png"
+                        class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover group-hover:grayscale group-hover:opacity-90 duration-300"
+                        alt="category1" />
+                    <p class="pt-1 text-sm lg:text-lg line-clamp-1">
+                        دانلودر اینستاگرام
+                    </p>
+                </a>
+                <a href="shop.html" class="group flex">
+                    <img src="https://img.icons8.com/pulsar-gradient/1000/youtube-play.png"
+                        class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover group-hover:grayscale group-hover:opacity-90 duration-300"
+                        alt="category1" />
+                    <p class="pt-1 text-sm lg:text-lg line-clamp-1">
+                        دانلودر یوتیوب
+                    </p>
+                </a>
+                <a href="shop.html" class="group flex">
+                    <img src="https://img.icons8.com/pulsar-gradient/1000/external-link.png"
+                        class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover group-hover:grayscale group-hover:opacity-90 duration-300"
+                        alt="category1" />
+                    <p class="pt-1 text-sm lg:text-lg line-clamp-1">
+                        ضدلینک و مدیریت گروه
+                    </p>
+
+                </a>
+                <a href="shop.html" class="group flex">
+                    <img src="https://img.icons8.com/pulsar-gradient/1000/benzene-ring.png"
+                        class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover group-hover:grayscale group-hover:opacity-90 duration-300"
+                        alt="category1" />
+                    <p class="pt-1 text-sm lg:text-lg line-clamp-1">
+                        پیامرسان
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <section class="mx-4 lg:container mt-20">
+            <div class="w-full h-80 rounded-xl bg-blue-500 dark:bg-blue-700 p-4 relative">
+                <!-- AmazingSlider Bot Features Slider -->
+                <div class="swiper AmazingSlider w-full rounded-xl">
+                    <div class="swiper-wrapper">
+                        <!-- item -->
+                        <div class="swiper-slide amazing-card">
+                            <img class="w-28 h-28" src="https://img.icons8.com/color/128/000000/telegram-app.png"
+                                alt="Bot Promotion Icon">
+                            <!-- TIMER -->
+                            <div class="flex items-center gap-x-2">
+                                <span class="timer-box" id="seconds">00</span>
+                                <p class="text-white">:</p>
+                                <span class="timer-box" id="minutes">00</span>
+                                <p class="text-white">:</p>
+                                <span class="timer-box" id="hours">24</span>
+                            </div>
+                            <a href="extensions.html" class="flex items-center gap-x-.5 text-gray-100 cursor-pointer">
+                                <p>مشاهده همه</p>
+                                <svg class="size-4 rotate-90">
+                                    <use href="#chevron"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="swiper-slide small-card group">
+                            <!-- bot feature header -->
+                            <div class="w-full flex items-center justify-between">
+                                <span class="flex items-center gap-x-0.5 text-blue-400">
+                                    <svg class="size-4 mb-1">
+                                        <use href="#rocket"></use>
+                                    </svg>
+                                    <p class="text-xs">فعال‌سازی سریع</p>
+                                </span>
+                                <span class="text-gray-400 flex items-center justify-end text-sm gap-x-0.5">
+                                    <p>5.0</p>
+                                    <svg class="size-4 mb-1">
+                                        <use href="#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <!-- bot feature img -->
+                            <a href="{% url 'extensions-details' %}">
+                                <img class="small-card_img" src="https://img.icons8.com/fluency/300/000000/no-link.png"
+                                    alt="Anti-Link Addon">
+                            </a>
+                            <!-- bot feature footer -->
+                            <div class="space-y-2">
+                                <a href="{% url 'extensions-details' %}" class="small-card_link">
+                                    افزونه ضد لینک - حذف خودکار لینک‌ها و اسپم
+                                </a>
+                                <!-- Rate and Price -->
+                                <div class="product-card_price-wrapper">
+                                    <!-- Price -->
+                                    <div class="small-card_price justify-between">
+                                        <span class="pt-1">50%</span>
+                                        <h4 class="flex items-center gap-x-1 text-lg">پلن پایه <p
+                                                class="text-xs font-DanaMedium">و بالاتر</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide small-card group">
+                            <!-- bot feature header -->
+                            <div class="w-full flex items-center justify-between">
+                                <span class="flex items-center gap-x-0.5 text-blue-400">
+                                    <svg class="size-4 mb-1">
+                                        <use href="#rocket"></use>
+                                    </svg>
+                                    <p class="text-xs">فعال‌سازی سریع</p>
+                                </span>
+                                <span class="text-gray-400 flex items-center justify-end text-sm gap-x-0.5">
+                                    <p>5.0</p>
+                                    <svg class="size-4 mb-1">
+                                        <use href="#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <!-- bot feature img -->
+                            <a href="{% url 'extensions-details' %}">
+                                <img class="small-card_img" src="https://img.icons8.com/fluency/300/000000/channel.png"
+                                    alt="Channel Management Addon">
+                            </a>
+                            <!-- bot feature footer -->
+                            <div class="space-y-2">
+                                <a href="{% url 'extensions-details' %}" class="small-card_link">
+                                    افزونه مدیریت کانال - زمان‌بندی و تحلیل محتوا
+                                </a>
+                                <!-- Rate and Price -->
+                                <div class="product-card_price-wrapper">
+                                    <!-- Price -->
+                                    <div class="small-card_price justify-between">
+                                        <span class="pt-1">40%</span>
+                                        <h4 class="flex items-center gap-x-1 text-lg">پلن حرفه‌ای <p
+                                                class="text-xs font-DanaMedium">و بالاتر</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide small-card group">
+                            <!-- bot feature header -->
+                            <span class="w-full text-gray-400 flex items-center justify-end text-sm gap-x-0.5">
+                                <p>5.0</p>
+                                <svg class="size-4 mb-1">
+                                    <use href="#star"></use>
+                                </svg>
+                            </span>
+                            <!-- bot feature img -->
+                            <a href="{% url 'extensions-details' %}">
+                                <img class="small-card_img"
+                                    src="https://img.icons8.com/fluency/300/000000/online-shop.png"
+                                    alt="E-Commerce Addon">
+                            </a>
+                            <!-- bot feature footer -->
+                            <div class="space-y-2">
+                                <a href="{% url 'extensions-details' %}" class="small-card_link">
+                                    افزونه فروشگاهی - فروشگاه آنلاین با پرداخت
+                                </a>
+                                <!-- Rate and Price -->
+                                <div class="product-card_price-wrapper">
+                                    <!-- Price -->
+                                    <div class="small-card_price justify-between">
+                                        <span class="pt-1">30%</span>
+                                        <h4 class="flex items-center gap-x-1 text-lg">پلن پیشرفته <p
+                                                class="text-xs font-DanaMedium">اختصاصی</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide small-card group">
+                            <!-- bot feature header -->
+                            <span class="w-full text-gray-400 flex items-center justify-end text-sm gap-x-0.5">
+                                <p>5.0</p>
+                                <svg class="size-4 mb-1">
+                                    <use href="#star"></use>
+                                </svg>
+                            </span>
+                            <!-- bot feature img -->
+                            <a href="{% url 'extensions-details' %}">
+                                <img class="small-card_img"
+                                    src="https://img.icons8.com/fluency/300/000000/translate.png"
+                                    alt="Translator Addon">
+                            </a>
+                            <!-- bot feature footer -->
+                            <div class="space-y-2">
+                                <a href="{% url 'extensions-details' %}" class="small-card_link">
+                                    افزونه مترجم - ترجمه خودکار متون و صوت
+                                </a>
+                                <!-- Rate and Price -->
+                                <div class="product-card_price-wrapper">
+                                    <!-- Price -->
+                                    <div class="small-card_price justify-between">
+                                        <span class="pt-1">25%</span>
+                                        <h4 class="flex items-center gap-x-1 text-lg">پلن پیشرفته <p
+                                                class="text-xs font-DanaMedium">اختصاصی</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide small-card group">
+                            <!-- bot feature header -->
+                            <span class="w-full text-gray-400 flex items-center justify-end text-sm gap-x-0.5">
+                                <p>5.0</p>
+                                <svg class="size-4 mb-1">
+                                    <use href="#star"></use>
+                                </svg>
+                            </span>
+                            <!-- bot feature img -->
+                            <a href="{% url 'extensions-details' %}">
+                                <img class="small-card_img"
+                                    src="https://img.icons8.com/fluency/300/000000/messaging.png" alt="Messaging Addon">
+                            </a>
+                            <!-- bot feature footer -->
+                            <div class="space-y-2">
+                                <a href="{% url 'extensions-details' %}" class="small-card_link">
+                                    افزونه پیام‌رسان - پیام‌های خودکار و ناشناس
+                                </a>
+                                <!-- Rate and Price -->
+                                <div class="product-card_price-wrapper">
+                                    <!-- Price -->
+                                    <div class="small-card_price justify-between">
+                                        <span class="pt-1">20%</span>
+                                        <h4 class="flex items-center gap-x-1 text-lg">پلن پایه <p
+                                                class="text-xs font-DanaMedium">و بالاتر</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide small-card group">
+                            <!-- bot feature header -->
+                            <span class="w-full text-gray-400 flex items-center justify-end text-sm gap-x-0.5">
+                                <p>5.0</p>
+                                <svg class="size-4 mb-1">
+                                    <use href="#star"></use>
+                                </svg>
+                            </span>
+                            <!-- bot feature img -->
+                            <a href="{% url 'extensions-details' %}">
+                                <img class="small-card_img"
+                                    src="https://img.icons8.com/fluency/300/000000/game-controller.png"
+                                    alt="Entertainment Addon">
+                            </a>
+                            <!-- bot feature footer -->
+                            <div class="space-y-2">
+                                <a href="{% url 'extensions-details' %}" class="small-card_link">
+                                    افزونه سرگرمی - بازی‌های تعاملی و کوییز
+                                </a>
+                                <!-- Rate and Price -->
+                                <div class="product-card_price-wrapper">
+                                    <!-- Price -->
+                                    <div class="small-card_price justify-between">
+                                        <span class="pt-1">15%</span>
+                                        <h4 class="flex items-center gap-x-1 text-lg">پلن حرفه‌ای <p
+                                                class="text-xs font-DanaMedium">و بالاتر</p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="extensions.html" class="swiper-slide amazing-card_last ">
+                            <svg class="size-10 ">
+                                <use href="#arrow-left-circle"></use>
+                            </svg>
+                            <h2>مشاهده همه</h2>
+                        </a>
+                    </div>
+                </div>
+                <button
+                    class="slider-navigate_btn absolute right-1 top-36 border dark:border-gray-700 border-gray-200 AmazingSlider-prev-slide z-10">
+                    <svg class="size-6 -rotate-90">
+                        <use href="#chevron" />
+                    </svg>
+                </button>
+                <button
+                    class="slider-navigate_btn absolute left-1 top-36 border dark:border-gray-700 border-gray-200 AmazingSlider-next-slide z-10">
+                    <svg class="size-6 rotate-90">
+                        <use href="#chevron" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Latest products -->
+        <section class="mx-4 lg:container mt-10 lg:mt-20">
+            <!-- SECTION TITLE -->
+            <div
+                class="flex flex-col gap-y-4 xs:flex-row items-center justify-between w-full text-center xs:text-start">
+                <div class="flex items-center gap-x-2 sm:gap-x-4">
+                    <span class="size-12 hidden xs:flex rounded-lg bg-white shadow-lg dark:bg-gray-800 flex-center">
+                        <svg class="size-7 text-gray-700 dark:text-gray-100">
+                            <use href="#mobile"></use>
+                        </svg>
+                    </span>
+                    <div class="space-y-1 md:space-y-1">
+                        <h3 class="text-xl md:text-2xl font-MorabbaMedium text-blue-600 dark:text-blue-500">
+                            <span class="text-gray-800 dark:text-gray-50">پلن های</span> موجود
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full xs:w-auto flex justify-between xs:justify-end items-center gap-x-2">
+                    <div class="flex items-center gap-x-2">
+                        <button class="slider-navigate_btn LatestProducts-prev-slide">
+                            <svg class="size-6 -rotate-90">
+                                <use href="#chevron" />
+                            </svg>
+                        </button>
+                        <button class="slider-navigate_btn LatestProducts-next-slide">
+                            <svg class="size-6 rotate-90">
+                                <use href="#chevron" />
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="shop.html"
+                        class="group shadow-xl text-sm md:text-base flex gap-x-1.5 items-center px-2 h-10 md:px-3 text-white bg-blue-600 rounded-xl">
+                        <p>مشاهده همه</p>
+                        <span
+                            class="w-7 h-7 rounded-full bg-blue-500 flex-center md:group-hover:-translate-x-1 transition-transform duration-300">
+                            <svg class="size-5">
+                                <use href="#arrow" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- Latest products Slider -->
+            <div class="swiper LatestProducts mt-5 w-full">
+                <div class="swiper-wrapper py-5">
+                    <!-- PRODUCT ITEM -->
+                    <div class="swiper-slide product-card group plans-card">
+                        <!-- product header -->
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        سبد خرید
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        علاقه‌مندی
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product img -->
+                        <a href="product-details.html" class="plans-card-icon_link">
+                            <!-- <img class="free-plan-card_img plan-card_img" src="{% static './images/plans/free_3161537.png' %}" alt=""> -->
+                            <img src="https://cdn-icons-png.freepik.com/512/13116/13116168.png?uid=R182569745&ga=GA1.1.2002105399.1752521856"
+                                alt="" class="plans-icon plans-card_icon">
+                        </a>
+                        <!-- product footer -->
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link plans-card_link">
+                                <!-- لپ تاپ 15.6 اینچی ایسوس مدل Vivobook15 X515MA-BR001-Celeron N4020-8GB DDR4 -->
+                                <ul>
+                                    <h2>پلن رایگان</h2>
+                                    <li>✔ سرعت بسیار پایین و بدون افزونه‌های کاربردی</li>
+                                    <li>✔ دارای تبلیغات و مزاحمت</li>
+                                    <li>✔ امکان ایجاد 15 دکمه</li>
+                                    <li>✔ بدون دکمه‌های شیشه‌ای</li>
+                                    <li>✔ آپلود فایل تا 100 مگابایت</li>
+                                    <li>✔ امکان تغییر متن‌های ربات</li>
+                                </ul>
+                            </a>
+                            <!-- Rate and Price -->
+                            <div class="product-card_price-wrapper">
+                                <!-- RATE -->
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">ارسال امروز</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p> 5.0 </p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- Price -->
+                                <div class="product-card_price">
+                                    <p>رایگان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group plans-card">
+                        <!-- product header -->
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        سبد خرید
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        علاقه‌مندی
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product img -->
+                        <a href="product-details.html" class="plans-card-img_link">
+                            <!-- <img class="plus-plan-card_img plan-card_img" src="{% static './images/plans/add_16110822.png' %}" alt=""> -->
+                            <img src="https://cdn-icons-png.freepik.com/512/14118/14118546.png?uid=R182569745&ga=GA1.1.2002105399.1752521856"
+                                alt="" class="plans-icon plans-card_icon">
+                        </a>
+                        <!-- product footer -->
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link plans-card_link">
+                                <!-- لپ تاپ 15.6 اینچی ایسوس مدل Vivobook15 X515MA-BR001-Celeron N4020-8GB DDR4 -->
+                                <ul>
+                                    <h2>پلن پلاس</h2>
+                                    <li>✔ سرعت پایین و بدون افزونه‌های کاربردی</li>
+                                    <li>✔ بدون تبلیغات و مزاحمت</li>
+                                    <li>✔ امکان ایجاد 10 دکمه و 20 زیرمنو</li>
+                                    <li>✔ امکان ایجاد 7 منوی شیشه‌ای</li>
+                                    <li>✔ آپلود فایل تا 200 مگابایت</li>
+                                    <li>✔ تست رایگان 3 روزه</li>
+                                </ul>
+                            </a>
+                            <!-- Rate and Price -->
+                            <div class="product-card_price-wrapper">
+                                <!-- RATE -->
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">ارسال امروز</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p> 5.0 </p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- Price -->
+                                <div class="product-card_price">
+                                    <p>69,000</p>
+                                    <span>تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group plans-card">
+                        <!-- product header -->
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        سبد خرید
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        علاقه‌مندی
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product img -->
+                        <a href="product-details.html" class="plans-card-icon_link">
+                            <!-- <img class="silver-plan-card_img plan-card_img" src="{% static './images/plans/configure_7634325.png' %}"
+                                alt=""> -->
+                            <img src="https://cdn-icons-png.freepik.com/512/15431/15431645.png?uid=R182569745&ga=GA1.1.2002105399.1752521856"
+                                alt="" class="plans-icon plans-card_icon">
+                        </a>
+                        <!-- product footer -->
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link plans-card_link">
+                                <!-- لپ تاپ 15.6 اینچی ایسوس مدل Vivobook15 X515MA-BR001-Celeron N4020-8GB DDR4 -->
+                                <ul>
+                                    <h2>پلن نقره‌ای</h2>
+                                    <li>✔ سرعت نسبتاً بالا و افزونه‌های مدیریت گروه و پیام‌رسان</li>
+                                    <li>✔ بدون تبلیغات و مزاحمت</li>
+                                    <li>✔ امکان ایجاد 20 دکمه و 30 زیرمنو</li>
+                                    <li>✔ امکان ایجاد 12 منوی شیشه‌ای</li>
+                                    <li>✔ آپلود فایل تا 1 گیگابایت</li>
+                                    <li>✔ تست رایگان 2 روزه</li>
+                                </ul>
+                            </a>
+                            <!-- Rate and Price -->
+                            <div class="product-card_price-wrapper">
+                                <!-- RATE -->
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">ارسال امروز</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p> 5.0 </p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- Price -->
+                                <div class="product-card_price">
+                                    <p>169,000</p>
+                                    <span>تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group plans-card">
+                        <!-- product header -->
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        سبد خرید
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        علاقه‌مندی
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product img -->
+                        <a href="#" class="plans-card-icon_link">
+                            <!-- <img class="golden-plan-card_img plan-card_img" src="{% static './images/plans/coin_11280638.png' %}"
+                                alt=""> -->
+                            <img src="https://cdn-icons-png.freepik.com/512/1636/1636146.png?uid=R182569745&ga=GA1.1.2002105399.1752521856"
+                                alt="" class="plans-icon plans-card_icon">
+                        </a>
+                        <!-- product footer -->
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link plans-card_link">
+                                <!-- لپ تاپ 15.6 اینچی ایسوس مدل Vivobook15 X515MA-BR001-Celeron N4020-8GB DDR4 -->
+                                <ul>
+                                    <h2>پلن طلایی</h2>
+                                    <li>✔ سرعت بالا و افزونه‌های آپلودر و دانلودر</li>
+                                    <li>✔ افزونه‌ی آزمون‌ساز</li>
+                                    <li>✔ دارای افزونه‌ها و امکانات پلن نقره‌ای</li>
+                                    <li>✔ امکان ایجاد 18 منوی شیشه‌ای</li>
+                                    <li>✔ آپلود فایل تا 10 گیگابایت</li>
+                                    <li>✔ تست رایگان 2 روزه</li>
+                                </ul>
+                            </a>
+                            <!-- Rate and Price -->
+                            <div class="product-card_price-wrapper">
+                                <!-- RATE -->
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">ارسال امروز</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p> 5.0 </p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- Price -->
+                                <div class="product-card_price">
+                                    <p>309,000</p>
+                                    <span>تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group plans-card">
+                        <!-- product header -->
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        سبد خرید
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        علاقه‌مندی
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product img -->
+                        <a href="product-details.html" class="plans-card-icon_link">
+                            <!-- <img class="diamond-plan-card_img plan-card_img" src="{% static './images/plans/diamond_6388865.png' %}"
+                                alt=""> -->
+                            <img src="https://cdn-icons-png.freepik.com/512/2200/2200964.png?uid=R182569745&ga=GA1.1.2002105399.1752521856"
+                                alt="" class="plans-icon plans-card_icon">
+                        </a>
+                        <!-- product footer -->
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link plans-card_link">
+                                <!-- لپ تاپ 15.6 اینچی ایسوس مدل Vivobook15 X515MA-BR001-Celeron N4020-8GB DDR4 -->
+                                <ul>
+                                    <h2>پلن الماسی</h2>
+                                    <li>✔ سرعت بسیار بالا و افزونه‌های مدیریت کانال</li>
+                                    <li>✔ افزونه‌ی مترجم</li>
+                                    <li>✔ دارای امکانات و افزونه‌های پلن طلایی</li>
+                                    <li>✔ امکان ایجاد 25 منوی شیشه‌ای</li>
+                                    <li>✔ آپلود فایل تا 20 گیگابایت</li>
+                                    <li>✔ تست رایگان 1 روزه</li>
+                                </ul>
+                            </a>
+                            <!-- Rate and Price -->
+                            <div class="product-card_price-wrapper">
+                                <!-- RATE -->
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">ارسال امروز</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p> 5.0 </p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- Price -->
+                                <div class="product-card_price">
+                                    <p>729,000</p>
+                                    <span>تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group plans-card">
+                        <!-- product header -->
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        سبد خرید
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">
+                                        علاقه‌مندی
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product img -->
+                        <a href="product-details.html" class="plans-card-icon_link">
+                            <!-- <img class="premium-plan-card_img plan-card_img"
+                                src="./images/plans/premium-quality_3649801.png" alt=""> -->
+                            <img src="https://cdn-icons-png.freepik.com/512/9584/9584099.png?uid=R182569745&ga=GA1.1.2002105399.1752521856"
+                                alt="" class="plans-icon plans-card_icon">
+                        </a>
+                        <!-- product footer -->
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link plans-card_link">
+                                <!-- لپ تاپ 15.6 اینچی ایسوس مدل Vivobook15 X515MA-BR001-Celeron N4020-8GB DDR4 -->
+                                <ul>
+                                    <h2>پلن پریمیوم</h2>
+                                    <li>✔ نهایت سرعت عملکرد</li>
+                                    <li>✔ دارای تمامی افزونه‌ها</li>
+                                    <li>✔ افزونه‌ی فروشگاهی</li>
+                                    <li>✔ امکان ایجاد منوها بدون محدودیت</li>
+                                    <li>✔ آپلود فایل با حجم بی‌نهایت</li>
+                                    <li>✔ دارای پشتیبانی مستقیم</li>
+                                    <li>✔ دارای تمامی امکانات کراپلود و تبلیغ رایگان</li>
+                                    <li>✔ تست 12 ساعته رایگان</li>
+                                </ul>
+                            </a>
+                            <!-- Rate and Price -->
+                            <div class="product-card_price-wrapper">
+                                <!-- RATE -->
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">ارسال امروز</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p> 5.0 </p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- Price -->
+                                <div class="product-card_price">
+                                    <p>1,490,000</p>
+                                    <span>تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER -->
+        <!-- <section
+            class="mx-4 lg:container mt-10 lg:mt-20 flex flex-col lg:flex-row items-center gap-5 child:rounded-xl child:overflow-hidden">
+            <a href="shop.html" class="group">
+                <img src="{% static './images/banner/1.webp' %}" class="group-hover:scale-105 transition-transform duration-300"
+                    alt="">
+            </a>
+            <a href="shop.html" class="group">
+                <img src="{% static './images/banner/2.webp' %}" class="group-hover:scale-105 transition-transform duration-300"
+                    alt="">
+            </a>
+        </section> -->
+
+        <!-- Best-selling products -->
+
+        <section class="mx-4 lg:container mt-10 lg:mt-20">
+            <!-- SECTION TITLE -->
+            <div
+                class="flex flex-col gap-y-4 xs:flex-row items-center justify-between w-full text-center xs:text-start">
+                <div class="flex items-center gap-x-2 sm:gap-x-4">
+                    <span class="size-12 hidden xs:flex rounded-lg bg-white shadow-lg dark:bg-gray-800 flex-center">
+                        <svg class="size-7 text-gray-700 dark:text-gray-100">
+                            <use href="#mobile"></use>
+                        </svg>
+                    </span>
+                    <div class="space-y-1 md:space-y-1">
+                        <h3 class="text-xl md:text-2xl font-MorabbaMedium text-gray-800 dark:text-gray-50">افزونه های
+                            <span class="text-blue-600 dark:text-blue-500">کاربردی</span>
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-300">جدیدترین و بروزترین افزونه‌ها</p>
+                    </div>
+                </div>
+                <div class="w-full xs:w-auto flex justify-between xs:justify-end items-center gap-x-2">
+                    <div class="flex items-center gap-x-2">
+                        <button class="slider-navigate_btn BestSelling-prev-slide">
+                            <svg class="size-6 -rotate-90">
+                                <use href="#chevron" />
+                            </svg>
+                        </button>
+                        <button class="slider-navigate_btn BestSelling-next-slide">
+                            <svg class="size-6 rotate-90">
+                                <use href="#chevron" />
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="index.html"
+                        class="group shadow-xl text-sm md:text-base flex gap-x-1.5 items-center px-2 h-10 md:px-3 text-white bg-blue-600 rounded-xl">
+                        <p>مشاهده همه</p>
+                        <span
+                            class="w-7 h-7 rounded-full bg-blue-500 flex-center md:group-hover:-translate-x-1 transition-transform duration-300">
+                            <svg class="size-5">
+                                <use href="#arrow" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- Latest products Slider -->
+            <div class="swiper BestSelling mt-5 w-full">
+                <div class="swiper-wrapper py-5">
+                    <!-- PLUGIN ITEM -->
+                    <div class="swiper-slide product-card group enhanced-plugin-card">
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">سبد خرید</div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">علاقه‌مندی</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="product-details.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" alt="مدیریت گروه"
+                                class="enlarged-plugin-img">
+                        </a>
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link enhanced-plugin-card_link">
+                                <ul>
+                                    <h2>افزونه مدیریت گروه</h2>
+                                    <li>✔ مدیریت اعضا و پیام‌ها</li>
+                                    <li>✔ ابزارهای فیلتر محتوا</li>
+                                    <li>✔ گزارش‌گیری فعالیت‌ها</li>
+                                    <li>✔ فعال در پلن‌های: نقره‌ای، طلایی، الماسی، پریمیوم</li>
+                                </ul>
+                                <a href="#" class="flex gap-x-1 items-center text-blue-400">مشاهده بیشتر</a>
+                            </a>
+                            <div class="product-card_price-wrapper">
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">فعال‌سازی فوری</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p>5.0</p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group enhanced-plugin-card">
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">سبد خرید</div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">علاقه‌مندی</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="product-details.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" alt="مترجم"
+                                class="enlarged-plugin-img">
+                        </a>
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link enhanced-plugin-card_link">
+                                <ul>
+                                    <h2>افزونه مترجم</h2>
+                                    <li>✔ ترجمه خودکار پیام‌ها</li>
+                                    <li>✔ پشتیبانی از 50+ زبان</li>
+                                    <li>✔ قابلیت شخصی‌سازی</li>
+                                    <li>✔ فعال در پلن‌های: الماسی، پریمیوم</li>
+                                </ul>
+                                <a href="#" class="flex gap-x-1 items-center text-blue-400">مشاهده بیشتر</a>
+                            </a>
+                            <div class="product-card_price-wrapper">
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">فعال‌سازی فوری</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p>5.0</p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group enhanced-plugin-card">
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">سبد خرید</div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">علاقه‌مندی</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="product-details.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" alt="آزمون‌ساز"
+                                class="enlarged-plugin-img">
+                        </a>
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link enhanced-plugin-card_link">
+                                <ul>
+                                    <h2>افزونه آزمون‌ساز</h2>
+                                    <li>✔ ایجاد آزمون‌های آنلاین</li>
+                                    <li>✔ تحلیل نتایج خودکار</li>
+                                    <li>✔ قابلیت اشتراک‌گذاری</li>
+                                    <li>✔ فعال در پلن‌های: طلایی، الماسی، پریمیوم</li>
+                                </ul>
+                                <a href="#" class="flex gap-x-1 items-center text-blue-400">مشاهده بیشتر</a>
+                            </a>
+                            <div class="product-card_price-wrapper">
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">فعال‌سازی فوری</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p>5.0</p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group enhanced-plugin-card">
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">سبد خرید</div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">علاقه‌مندی</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="product-details.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" alt="آپلودر"
+                                class="enlarged-plugin-img">
+                        </a>
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link enhanced-plugin-card_link">
+                                <ul>
+                                    <h2>افزونه آپلودر</h2>
+                                    <li>✔ آپلود فایل با سرعت بالا</li>
+                                    <li>✔ پشتیبانی از فرمت‌های مختلف</li>
+                                    <li>✔ مدیریت فایل‌ها</li>
+                                    <li>✔ فعال در پلن‌های: طلایی، الماسی، پریمیوم</li>
+                                </ul>
+                                <a href="#" class="flex gap-x-1 items-center text-blue-400">مشاهده بیشتر</a>
+                            </a>
+                            <div class="product-card_price-wrapper">
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">فعال‌سازی فوری</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p>5.0</p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product-card group enhanced-plugin-card">
+                        <div class="product-card_header">
+                            <div class="flex items-center gap-x-2">
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#shopping-cart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">سبد خرید</div>
+                                </div>
+                                <div class="tooltip">
+                                    <button class="rounded-full p-1.5 app-border app-hover">
+                                        <svg class="size-4">
+                                            <use href="#heart"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="tooltiptext">علاقه‌مندی</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="product-details.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047710.png" alt="فروشگاهی"
+                                class="enlarged-plugin-img">
+                        </a>
+                        <div class="space-y-2">
+                            <a href="product-details.html" class="product-card_link enhanced-plugin-card_link">
+                                <ul>
+                                    <h2>افزونه فروشگاهی</h2>
+                                    <li>✔ ایجاد فروشگاه آنلاین</li>
+                                    <li>✔ مدیریت محصولات و سفارشات</li>
+                                    <li>✔ درگاه پرداخت امن</li>
+                                    <li>✔ فعال در پلن پریمیوم</li>
+                                </ul>
+                                <a href="#" class="flex gap-x-1 items-center text-blue-400">مشاهده بیشتر</a>
+                            </a>
+                            <div class="product-card_price-wrapper">
+                                <div class="product-card_rate">
+                                    <span class="flex items-center gap-x-0.5">
+                                        <svg class="size-4 text-blue-500 mb-0.5">
+                                            <use href="#rocket"></use>
+                                        </svg>
+                                        <p class="text-xs">فعال‌سازی فوری</p>
+                                    </span>
+                                    <span class="text-gray-400 flex items-center text-sm gap-x-0.5">
+                                        <p>5.0</p>
+                                        <svg class="size-4 mb-1">
+                                            <use href="#star"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
