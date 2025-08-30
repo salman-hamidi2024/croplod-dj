@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .forms import *
 from .models import *
 
@@ -24,18 +25,19 @@ def faq_questions(request):
 def contactus(request):
     form = Ticket_Form()
     if request.method == "POST":
-        pass
-    return render(request, "contact-us.html")
-
-
-
-
-
-
-
-
-
-
+        form = Ticket_Form(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "درخواست ارسال شد")
+            return redirect('contact-us')
+        else: 
+            messages.error(request, "همه فیلد هارو پرکنید")
+            return redirect('contact-us')
+    
+    context = {
+        'form' : form,
+    }
+    return render(request, "contact-us.html", context)
 
 
 

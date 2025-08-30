@@ -313,9 +313,15 @@
                     </div>
 
                     <!-- Support Form -->
-                    <form class="space-y-5" action="/submit-ticket" method="POST">
+                    <form class="space-y-5" method="POST">
+                        {% csrf_token %}
                         <div class="grid grid-cols-12 gap-6">
-                            <input type="text" name="full_name" required placeholder="نام و نام خانوادگی"
+                            {{ form.full_name }}
+                            {{ form.email }}
+                            {{ form.code }}
+                            {{ form.request_type }}
+                            {{ form.content }}
+                            {% comment %} <input type="text" name="full_name" required placeholder="نام و نام خانوادگی"
                                 class="block w-full p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-6 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
                                 aria-label="نام و نام خانوادگی">
                             <input type="email" name="email" required placeholder="ایمیل"
@@ -347,7 +353,7 @@
                             <textarea name="message" required
                                 placeholder="پیام شما (توضیحات کامل مشکل یا سؤال خود را وارد کنید)"
                                 class="w-full h-200 p-3 outline dark:outline-none outline-1 -outline-offset-1 placeholder:text-gray-400 transition-all col-span-12 text-gray-800 dark:text-gray-100 dark:bg-gray-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded-md outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-blue-400"
-                                aria-label="پیام"></textarea>
+                                aria-label="پیام"></textarea> {% endcomment %}
                         </div>
                         <div class="flex items-center justify-between">
                             <button type="submit"

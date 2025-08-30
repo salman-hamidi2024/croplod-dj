@@ -644,7 +644,7 @@
                         </ul>
                     </li>
                     <li class="menu-item">
-                        <a href="contact-us.html" class="menu-item_link hover:text-blue-400 transition-colors">
+                        <a href="{% url 'contact-us' %}" class="menu-item_link hover:text-blue-400 transition-colors">
                             تماس با ما
                         </a>
                     </li>
@@ -923,7 +923,7 @@
                             <svg class="size-5">
                                 <use href="#phone" />
                             </svg>
-                            <a href="contact-us.html">تماس با ما</a>
+                            <a href="{% url 'contact-us' %}">تماس با ما</a>
                         </li>
                     </ul>
                 </div>
@@ -1434,7 +1434,7 @@
                         </li>
                         <li>
                             <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
-                            <p>کاربران می‌توانند در هر زمان از طریق <a href="contact-us.html"
+                            <p>کاربران می‌توانند در هر زمان از طریق <a href="{% url 'contact-us' %}"
                                     class="text-blue-600 hover:underline" title="تماس با پشتیبانی">صفحه تماس با ما</a>
                                 درخواست
                                 حذف کامل اطلاعات حساب کاربری خود را ارائه دهند. این درخواست ظرف مدت 30 روز پردازش خواهد
@@ -1506,7 +1506,7 @@
                         class="mt-3 text-gray-600 dark:text-gray-300 space-y-2 child:flex child:items-start child:gap-x-2">
                         <li>
                             <span class="w-3 h-3 rounded-full bg-blue-500 flex mt-2"></span>
-                            <p>پشتیبانی کراپلود از طریق <a href="contact-us.html" class="text-blue-600 hover:underline"
+                            <p>پشتیبانی کراپلود از طریق <a href="{% url 'contact-us' %}" class="text-blue-600 hover:underline"
                                     title="تماس با پشتیبانی">ایمیل، شماره تماس، یا چت آنلاین</a> در دسترس است. در
                                 پلن‌های
                                 پیشرفته‌تر، پشتیبانی 24/7 و اولویت‌دار ارائه می‌شود.</p>
@@ -1617,7 +1617,7 @@
                             </a>
                         </li>
                         <li class="group">
-                            <a href="contact-us.html"
+                            <a href="{% url 'contact-us' %}"
                                 class="flex items-center justify-center gap-x-1 group-hover:pr-2 duration-300 transition-all group-hover:text-blue-500"
                                 title="تماس با پشتیبانی کراپلود">
                                 <p>تماس با ما</p>
@@ -1700,7 +1700,7 @@
                             <li><a href="{ url 'faq_questions' }">سوالات متداول</a></li>
                         </ul>
                         <ul class="space-y-2 text-gray-400 text-sm child-hover:text-blue-500">
-                            <li><a href="contact-us.html">تماس با ما</a></li>
+                            <li><a href="{% url 'contact-us' %}">تماس با ما</a></li>
                             <li><a href="login.html">ورود / ثبت‌نام</a></li>
                             <li><a href="terms.html">قوانین و مقررات</a></li>
                             <li><a href="dashboard.html">پنل کاربری</a></li>

@@ -331,7 +331,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="contact-us.html" class="menu-item_link hover:text-blue-400 transition-colors">
+                    <a href="{% url 'contact-us' %}" class="menu-item_link hover:text-blue-400 transition-colors">
                         تماس با ما
                     </a>
                 </li>
@@ -585,7 +585,7 @@
                         <svg class="size-5">
                             <use href="#phone" />
                         </svg>
-                        <a href="contact-us.html">تماس با ما</a>
+                        <a href="{% url 'contact-us' %}">تماس با ما</a>
                     </li>
                 </ul>
             </div>
@@ -834,7 +834,7 @@
                         <li><a href="{ url 'faq_questions' }">سوالات متداول</a></li>
                     </ul>
                     <ul class="space-y-2 text-gray-400 text-sm child-hover:text-blue-500">
-                        <li><a href="contact-us.html">تماس با ما</a></li>
+                        <li><a href="{% url 'contact-us' %}">تماس با ما</a></li>
                         <li><a href="login.html">ورود / ثبت‌نام</a></li>
                         <li><a href="terms.html">قوانین و مقررات</a></li>
                         <li><a href="dashboard.html">پنل کاربری</a></li>
