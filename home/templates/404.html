@@ -1,0 +1,27 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <section class="w-full flex flex-col items-center justify-center md:my-8"><br><br><br><br>
+        <img class="float-animation max-w-sm object-cover h-96" src="{% static './images/svg/404.svg' %}" alt=""> 
+        <div class="flex flex-col justify-center items-center gap-y-2">
+            <h2 class="font-DanaMedium text-xl">صفحه‌ای که دنبال آن بودید پیدا نشد!</h2>
+            <a href="{% url 'homepage' %}" class="flex items-center gap-x-1  text-blue-400 hover:text-blue-500 transition-all">
+                بازگشت به صفحه اصلی 
+                <svg class=" size-4 rotate-90">
+                    <use href="#chevron" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <div class="search-overlay"></div>
+
+    <script src="{% static './scripts/app.js' %}"></script>
+
+{% endblock %}
